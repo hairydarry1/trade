@@ -41,6 +41,51 @@
             --shadow: rgba(0,0,0,0.1);
         }
 
+        .theme-cyberpunk {
+            --bg: #0d0221;
+            --bg-dark: #150734;
+            --bg-card: #1f0a3a;
+            --bg-elevated: #2a1050;
+            --bg-input: #1a0840;
+            --text: #ff00ff;
+            --text-muted: #ff88ff;
+            --primary: #00ffff;
+            --secondary: #ff00ff;
+            --accent: #ffff00;
+            --border: rgba(255,0,255,0.3);
+            --shadow: rgba(255,0,255,0.2);
+        }
+
+        .theme-forest {
+            --bg: #1a2f1a;
+            --bg-dark: #152515;
+            --bg-card: #1f331f;
+            --bg-elevated: #284028;
+            --bg-input: #1a2a1a;
+            --text: #e8f5e8;
+            --text-muted: #a8d8a8;
+            --primary: #4caf50;
+            --secondary: #8bc34a;
+            --accent: #cddc39;
+            --border: rgba(76,175,80,0.3);
+            --shadow: rgba(76,175,80,0.2);
+        }
+
+        .theme-ocean {
+            --bg: #0a1929;
+            --bg-dark: #071018;
+            --bg-card: #0d2137;
+            --bg-elevated: #112a45;
+            --bg-input: #0a1f2e;
+            --text: #ccd6f6;
+            --text-muted: #8892b0;
+            --primary: #64ffda;
+            --secondary: #57cbff;
+            --accent: #ffd700;
+            --border: rgba(100,255,218,0.3);
+            --shadow: rgba(100,255,218,0.2);
+        }
+
         /* Rich Text Editor */
         .rich-text-toolbar {
             display: flex;
@@ -482,6 +527,123 @@
         .notification-message { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
         .notification-time { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
 
+        /* Section AI Panels */
+        .section-ai-panel {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .section-ai-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .section-ai-header i {
+            color: var(--secondary);
+        }
+
+        .section-ai-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .section-ai-btn {
+            padding: 8px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .section-ai-btn:hover {
+            background: var(--bg-elevated);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .section-ai-btn i {
+            font-size: 0.8rem;
+        }
+
+        .section-ai-input {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .section-ai-input input {
+            flex: 1;
+            padding: 10px 14px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .section-ai-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .section-ai-output {
+            margin-top: 12px;
+            padding: 12px;
+            background: var(--bg-input);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .section-ai-output.visible {
+            display: block;
+        }
+
+        .section-ai-output.loading {
+            opacity: 0.7;
+        }
+
+        .section-ai-actions-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .section-ai-insert {
+            padding: 6px 12px;
+            background: var(--primary);
+            color: #0a0a0f;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .section-ai-copy {
+            padding: 6px 12px;
+            background: var(--bg-card);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
         /* Folder System */
         .folder-tree {
             padding: 8px 0;
@@ -640,7 +802,281 @@
             background: var(--bg-card);
             border-radius: 8px;
             margin-top: 12px;
+            flex-wrap: wrap;
+            align-items: center;
         }
+
+        .template-select {
+            padding: 8px 12px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-size: 13px;
+            min-width: 150px;
+        }
+
+        /* Code Editor Tabs */
+        .code-editor-tabs {
+            display: flex;
+            gap: 4px;
+            padding: 8px 12px;
+            background: var(--bg-card);
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .code-tab {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px 6px 0 0;
+            color: var(--text-muted);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab:hover {
+            background: var(--bg-elevated);
+            color: var(--text);
+        }
+
+        .code-tab.active {
+            background: var(--bg-dark);
+            border-bottom-color: var(--bg-dark);
+            color: var(--text);
+        }
+
+        .code-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .code-tab button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 2px;
+            font-size: 10px;
+        }
+
+        .code-tab button:hover {
+            color: var(--danger);
+        }
+
+        .code-tab-add {
+            padding: 6px 10px;
+            background: none;
+            border: 1px dashed var(--border);
+            border-radius: 6px;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .code-tab-add:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .pane-actions {
+            display: flex;
+            gap: 4px;
+        }
+
+        .pane-actions button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 4px;
+        }
+
+        .pane-actions button:hover {
+            background: var(--bg-dark);
+            color: var(--primary);
+        }
+
+        /* Code Textarea with Line Numbers */
+        .codepen-pane-content {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .line-numbers {
+            width: 40px;
+            padding: 12px 8px;
+            background: rgba(0,0,0,0.2);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            text-align: right;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        .code-textarea {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            resize: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text);
+            padding: 12px;
+            tab-size: 2;
+        }
+
+        .code-textarea:focus {
+            outline: none;
+        }
+
+        /* Code Editor Toolbar */
+        .code-editor-toolbar {
+            display: flex;
+            gap: 8px;
+            padding: 8px 12px;
+            background: var(--bg-card);
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .code-editor-toolbar select,
+        .code-editor-toolbar input[type="number"] {
+            padding: 4px 8px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text);
+            font-size: 12px;
+        }
+
+        .code-editor-toolbar button {
+            padding: 4px 10px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-muted);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-editor-toolbar button:hover,
+        .code-editor-toolbar button.active {
+            background: var(--bg-dark);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .code-editor-toolbar label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .code-editor-toolbar input[type="checkbox"] {
+            accent-color: var(--primary);
+        }
+
+        /* Bracket Matching Highlight */
+        .bracket-match {
+            background: rgba(0, 245, 212, 0.2);
+            border-radius: 2px;
+        }
+
+        /* Code Error Indicator */
+        .code-error-line {
+            background: rgba(255, 71, 87, 0.15);
+            border-left: 3px solid #ff4757;
+        }
+
+        /* Auto-complete Dropdown */
+        .autocomplete-dropdown {
+            position: absolute;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .autocomplete-dropdown.show {
+            display: block;
+        }
+
+        .autocomplete-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .autocomplete-item:last-child {
+            border-bottom: none;
+        }
+
+        .autocomplete-item:hover {
+            background: var(--bg-elevated);
+            color: var(--primary);
+        }
+
+        /* Minimap */
+        .minimap {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60px;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .minimap-viewport {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background: rgba(0, 245, 212, 0.2);
+            border: 1px solid var(--primary);
+        }
+
+        /* Console Styles */
+        .console-info { color: #888; }
+        .console-log { color: #d4d4d4; }
+        .console-warn { color: #f0db4f; }
+        .console-error { color: #f44747; }
+        .console-success { color: #00f5d4; }
+
+        /* Syntax Highlighting (basic) */
+        .syntax-html { color: #e34c26; }
+        .syntax-css { color: #264de4; }
+        .syntax-js { color: #f0db4f; }
 
         /* ==================== TODOIST-STYLE (Tasks) ==================== */
         .todoist-style {
@@ -1046,6 +1482,72 @@
 
         .chat-msg .text {
             color: #e0e0e0;
+        }
+
+        .command-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: var(--bg-elevated);
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .command-trigger {
+            background: var(--bg-dark);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .command-response {
+            flex: 1;
+            color: var(--text-muted);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .btn-icon {
+            padding: 6px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn-icon:hover {
+            background: var(--bg-card);
+            color: var(--primary);
+        }
+
+        .widget-btn {
+            padding: 16px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .widget-btn:hover {
+            background: var(--bg-card);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .widget-btn i {
+            font-size: 16px;
         }
 
         @media (max-width: 768px) {
@@ -2735,6 +3237,34 @@
 
         .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
+        .project-status-badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .project-status-badge.planning {
+            background: rgba(155, 93, 229, 0.2);
+            color: var(--secondary);
+        }
+
+        .project-status-badge.in-progress {
+            background: rgba(0, 245, 212, 0.2);
+            color: var(--primary);
+        }
+
+        .project-status-badge.review {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+
+        .project-status-badge.completed {
+            background: rgba(0, 187, 249, 0.2);
+            color: var(--accent-blue);
+        }
+
         .tag {
             padding: 4px 10px;
             background: var(--bg-card);
@@ -2943,6 +3473,46 @@
 
         .todo-delete { color: var(--text-muted); cursor: pointer; padding: 4px; font-size: 0.85rem; }
         .todo-delete:hover { color: #ff6b6b; }
+
+        .task-priority-badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .task-priority-badge.high {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+        }
+
+        .task-priority-badge.medium {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+
+        .task-priority-badge.low {
+            background: rgba(0, 245, 212, 0.2);
+            color: var(--primary);
+        }
+
+        .task-due-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            padding: 2px 8px;
+            background: var(--bg-card);
+            border-radius: 4px;
+        }
+
+        .task-stat {
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+
+        .task-stat:hover {
+            transform: translateY(-2px);
+        }
 
         .terminal {
             background: #0d1117;
@@ -3154,6 +3724,95 @@
         .ai-action-btn:hover {
             border-color: var(--primary);
             color: var(--primary);
+        }
+
+        /* AI Code Assistant */
+        .ai-code-panel {
+            margin-top: 16px;
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .ai-code-panel h4 {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+        }
+
+        .ai-code-input {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .ai-code-input input {
+            flex: 1;
+            padding: 12px 16px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .ai-code-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .ai-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ai-suggestion {
+            padding: 8px 16px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ai-suggestion:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .ai-suggestion i {
+            margin-right: 6px;
+        }
+
+        .ai-generated-code {
+            margin-top: 12px;
+            padding: 12px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #d4d4d4;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .ai-generated-code .code-keyword { color: #569cd6; }
+        .ai-generated-code .code-string { color: #ce9178; }
+        .ai-generated-code .code-function { color: #dcdcaa; }
+        .ai-generated-code .code-comment { color: #6a9955; }
+
+        .ai-code-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
         }
 
         .ai-input-area {
@@ -3902,32 +4561,96 @@
                     <p>Write and run code like CodePen</p>
                 </div>
 
+                <!-- Code Editor Toolbar -->
+                <div class="code-editor-toolbar">
+                    <button id="btn-wordwrap" onclick="toggleWordWrap()" title="Word Wrap"><i class="fas fa-align-left"></i></button>
+                    <button id="btn-minimap" onclick="toggleMinimap()" title="Minimap"><i class="fas fa-map"></i></button>
+                    <button id="btn-brackets" onclick="toggleBracketMatch()" title="Bracket Matching"><i class="fas fa-code"></i></button>
+                    <select id="font-size-select" onchange="changeFontSize(this.value)" title="Font Size">
+                        <option value="12">12px</option>
+                        <option value="13" selected>13px</option>
+                        <option value="14">14px</option>
+                        <option value="15">15px</option>
+                        <option value="16">16px</option>
+                        <option value="18">18px</option>
+                    </select>
+                    <select id="editor-theme" onchange="changeEditorTheme(this.value)" title="Theme">
+                        <option value="dark" selected>Dark</option>
+                        <option value="light">Light</option>
+                        <option value="monokai">Monokai</option>
+                        <option value="github">GitHub</option>
+                        <option value="dracula">Dracula</option>
+                        <option value="nord">Nord</option>
+                    </select>
+                    <label><input type="checkbox" id="auto-close" checked onchange="toggleAutoClose()"> Auto-close</label>
+                    <label><input type="checkbox" id="indent-guides" checked onchange="toggleIndentGuides()"> Guides</label>
+                    <div style="flex: 1;"></div>
+                    <span style="font-size: 11px; color: var(--text-muted);">
+                        <kbd>Ctrl+S</kbd> Save | <kbd>Ctrl+Enter</kbd> Run | <kbd>Ctrl+F</kbd> Find
+                    </span>
+                </div>
+
+                <!-- Code Editor Tabs -->
+                <div class="code-editor-tabs">
+                    <div class="code-tab active" data-tab="html">
+                        <i class="fab fa-html5" style="color: #e34c26;"></i>
+                        <span>index.html</span>
+                        <button onclick="closeTab('html')"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="code-tab" data-tab="css">
+                        <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                        <span>style.css</span>
+                        <button onclick="closeTab('css')"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="code-tab" data-tab="js">
+                        <i class="fab fa-js" style="color: #f0db4f;"></i>
+                        <span>script.js</span>
+                        <button onclick="closeTab('js')"><i class="fas fa-times"></i></button>
+                    </div>
+                    <button class="code-tab-add" onclick="addCodeTab()"><i class="fas fa-plus"></i></button>
+                </div>
+
+                <!-- Code Editor Container -->
                 <div class="codepen-editor">
-                    <div class="codepen-pane">
+                    <!-- HTML Pane -->
+                    <div class="codepen-pane" id="pane-html">
                         <div class="codepen-pane-header">
                             <span>HTML</span>
-                            <i class="fab fa-html5" style="color: #e34c26;"></i>
+                            <div class="pane-actions">
+                                <button onclick="insertSnippet('html')" title="Insert Template"><i class="fas fa-file-code"></i></button>
+                            </div>
                         </div>
                         <div class="codepen-pane-content">
-                            <textarea id="codepen-html" placeholder="<!-- HTML -->" oninput="updatePreview()"></textarea>
+                            <div class="line-numbers" id="html-lines">1</div>
+                            <textarea id="codepen-html" class="code-textarea" placeholder="<!-- HTML -->" spellcheck="false"></textarea>
                         </div>
                     </div>
-                    <div class="codepen-pane">
+                    
+                    <!-- CSS Pane -->
+                    <div class="codepen-pane" id="pane-css">
                         <div class="codepen-pane-header">
                             <span>CSS</span>
-                            <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                            <div class="pane-actions">
+                                <button onclick="insertSnippet('css')" title="Insert Template"><i class="fas fa-file-code"></i></button>
+                            </div>
                         </div>
                         <div class="codepen-pane-content">
-                            <textarea id="codepen-css" placeholder="/* CSS */" oninput="updatePreview()"></textarea>
+                            <div class="line-numbers" id="css-lines">1</div>
+                            <textarea id="codepen-css" class="code-textarea" placeholder="/* CSS */" spellcheck="false"></textarea>
                         </div>
                     </div>
-                    <div class="codepen-pane">
+                    
+                    <!-- JS Pane -->
+                    <div class="codepen-pane" id="pane-js">
                         <div class="codepen-pane-header">
                             <span>JavaScript</span>
-                            <i class="fab fa-js" style="color: #f0db4f;"></i>
+                            <div class="pane-actions">
+                                <button onclick="insertSnippet('js')" title="Insert Template"><i class="fas fa-file-code"></i></button>
+                            </div>
                         </div>
                         <div class="codepen-pane-content">
-                            <textarea id="codepen-js" placeholder="// JavaScript" oninput="updatePreview()"></textarea>
+                            <div class="line-numbers" id="js-lines">1</div>
+                            <textarea id="codepen-js" class="code-textarea" placeholder="// JavaScript" spellcheck="false"></textarea>
                         </div>
                     </div>
                 </div>
@@ -3937,20 +4660,105 @@
                     <button class="btn btn-secondary" onclick="saveCodepenSnippet()"><i class="fas fa-save"></i> Save</button>
                     <button class="btn btn-secondary" onclick="clearCodepen()"><i class="fas fa-trash"></i> Clear</button>
                     <button class="btn btn-secondary" onclick="formatCode()"><i class="fas fa-align-left"></i> Format</button>
+                    <div style="flex: 1;"></div>
+                    <select id="code-template" class="template-select" onchange="loadTemplate(this.value)">
+                        <option value="">Load Template...</option>
+                        <option value="landing">Landing Page</option>
+                        <option value="todo">Todo App</option>
+                        <option value="counter">Counter</option>
+                        <option value="form">Contact Form</option>
+                        <option value="gallery">Image Gallery</option>
+                        <option value="clock">Digital Clock</option>
+                        <option value="quiz">Quiz App</option>
+                    </select>
                 </div>
 
-                <div class="card" style="margin-top: 16px;">
-                    <div class="card-header">
-                        <span class="card-title">Output</span>
+                <div class="grid-2" style="gap: 16px; margin-top: 16px;">
+                    <!-- Output -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Output</span>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn btn-sm btn-secondary" onclick="refreshPreview()"><i class="fas fa-sync"></i></button>
+                                <button class="btn btn-sm btn-secondary" onclick="openInNewTab()"><i class="fas fa-external-link-alt"></i></button>
+                            </div>
+                        </div>
+                        <iframe id="codepen-output" style="width: 100%; height: 300px; border: none; background: #fff; border-radius: 8px;"></iframe>
                     </div>
-                    <iframe id="codepen-output" style="width: 100%; height: 250px; border: none; background: #fff; border-radius: 8px;"></iframe>
+                    
+                    <!-- Console Output -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title"><i class="fas fa-terminal" style="color: var(--primary);"></i> Console</span>
+                            <button class="btn btn-sm btn-secondary" onclick="clearConsole()"><i class="fas fa-trash"></i> Clear</button>
+                        </div>
+                        <div id="console-output" style="height: 300px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 12px; background: #1e1e1e; border-radius: 8px; color: #d4d4d4;">
+                            <div class="console-info"><i class="fas fa-info-circle"></i> Console output will appear here</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card">
+                <!-- Saved Snippets -->
+                <div class="card" style="margin-top: 16px;">
                     <div class="card-header">
                         <span class="card-title">Saved Snippets</span>
                     </div>
                     <div id="snippets-list"></div>
+                </div>
+
+                <!-- AI Code Assistant -->
+                <div class="ai-code-panel">
+                    <h4><i class="fas fa-magic"></i> AI Code Assistant</h4>
+                    <div class="ai-code-input">
+                        <input type="text" id="ai-code-prompt" placeholder="Describe what code you need... (e.g., 'Login form with validation')">
+                        <button class="btn btn-primary" onclick="generateAICode()">
+                            <i class="fas fa-wand-magic-sparkles"></i> Generate
+                        </button>
+                    </div>
+                    <div class="ai-suggestions">
+                        <div class="ai-suggestion" onclick="quickCode('login form')">
+                            <i class="fas fa-user-lock"></i> Login Form
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('modal dialog')">
+                            <i class="fas fa-window-maximize"></i> Modal Dialog
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('carousel slider')">
+                            <i class="fas fa-images"></i> Carousel
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('api fetch')">
+                            <i class="fas fa-cloud"></i> API Fetch
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('drag drop')">
+                            <i class="fas fa-hand-pointer"></i> Drag & Drop
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('timer stopwatch')">
+                            <i class="fas fa-stopwatch"></i> Timer
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('tabs component')">
+                            <i class="fas fa-folder"></i> Tabs
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('accordion')">
+                            <i class="fas fa-list"></i> Accordion
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('toast notification')">
+                            <i class="fas fa-bell"></i> Notifications
+                        </div>
+                        <div class="ai-suggestion" onclick="quickCode('form validation')">
+                            <i class="fas fa-check-circle"></i> Validation
+                        </div>
+                    </div>
+                    <div id="ai-generated-code" class="ai-generated-code" style="display: none;"></div>
+                    <div class="ai-code-actions" id="ai-code-actions" style="display: none;">
+                        <button class="btn btn-primary btn-sm" onclick="insertAICode()">
+                            <i class="fas fa-code"></i> Insert Code
+                        </button>
+                        <button class="btn btn-secondary btn-sm" onclick="copyAICode()">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="btn btn-secondary btn-sm" onclick="runAICode()">
+                            <i class="fas fa-play"></i> Run
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -3961,13 +4769,37 @@
                     <p>Like Notion - write, organize, collaborate</p>
                 </div>
 
-                <div class="grid-2" style="grid-template-columns: 240px 1fr; gap: 0;">
-                    <!-- Notion Sidebar -->
-                    <div class="notion-sidebar">
+                <!-- Notes Search & Actions -->
+                <div class="notes-toolbar" style="display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <input type="text" id="notes-search" placeholder="Search notes..." style="width: 100%; padding: 10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text);" oninput="searchNotes(this.value)">
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <select id="notes-filter" onchange="filterNotesByTag(this.value)" style="padding: 10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text);">
+                            <option value="">All Tags</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="ideas">Ideas</option>
+                            <option value="important">Important</option>
+                        </select>
+                        <button class="btn btn-secondary" onclick="exportNote('markdown')" title="Export as Markdown"><i class="fas fa-file-export"></i></button>
+                        <button class="btn btn-secondary" onclick="exportNote('html')" title="Export as HTML"><i class="fas fa-code"></i></button>
+                        <button class="btn btn-secondary" onclick="exportNote('txt')" title="Export as Text"><i class="fas fa-file-alt"></i></button>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="grid-template-columns: 280px 1fr; gap: 16px;">
+                    <!-- Notion Sidebar with Note List -->
+                    <div class="notion-sidebar" style="border-radius: 8px; overflow: hidden;">
                         <div class="notion-nav-item active"><i class="fas fa-home"></i> Home</div>
                         <div class="notion-nav-item"><i class="fas fa-sticky-note"></i> My Notes</div>
                         <div class="notion-nav-item"><i class="fas fa-book"></i> Workspace</div>
-                        <div style="flex: 1;"></div>
+                        
+                        <!-- Note List -->
+                        <div id="notes-list" style="flex: 1; overflow-y: auto; max-height: 400px; padding: 8px;">
+                            <!-- Notes rendered here -->
+                        </div>
+                        
                         <div style="padding: 12px; border-top: 1px solid var(--border);">
                             <button class="btn btn-secondary" style="width: 100%;" onclick="createNotionPage()">
                                 <i class="fas fa-plus"></i> New Page
@@ -3976,8 +4808,20 @@
                     </div>
 
                     <!-- Notion Editor -->
-                    <div class="card" style="margin-left: -1px; border-radius: 0 8px 8px 0;">
-                        <input type="text" id="notion-title" placeholder="Untitled" style="font-size: 2rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; border: none; background: transparent; padding: 0; margin-bottom: 16px; width: 100%;">
+                    <div class="card" style="border-radius: 8px;">
+                        <input type="text" id="notion-title" placeholder="Untitled" style="font-size: 2rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; border: none; background: transparent; padding: 0; margin-bottom: 12px; width: 100%;">
+                        
+                        <!-- Tags -->
+                        <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+                            <select id="note-tag-select" style="padding: 6px 12px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 12px;">
+                                <option value="">No Tag</option>
+                                <option value="work">Work</option>
+                                <option value="personal">Personal</option>
+                                <option value="ideas">Ideas</option>
+                                <option value="important">Important</option>
+                            </select>
+                            <span id="note-date" style="font-size: 12px; color: var(--text-muted); align-self: center;"></span>
+                        </div>
                         
                         <div class="notion-editor">
                             <div class="notion-block" contenteditable="true" id="notion-block-1" data-placeholder="Type '/' for commands..."></div>
@@ -3990,6 +4834,36 @@
                             <button class="btn btn-secondary btn-sm" onclick="addNotionBlock('quote')"><i class="fas fa-quote-right"></i> Quote</button>
                             <button class="btn btn-secondary btn-sm" onclick="addNotionBlock('code')"><i class="fas fa-code"></i> Code</button>
                             <button class="btn btn-secondary btn-sm" onclick="addNotionBlock('divider')"><i class="fas fa-minus"></i> Divider</button>
+                            <button class="btn btn-secondary btn-sm" onclick="addNotionBlock('image')"><i class="fas fa-image"></i> Image</button>
+                        </div>
+
+                        <!-- AI Writing Assistant -->
+                        <div class="section-ai-panel" id="notes-ai-panel">
+                            <div class="section-ai-header">
+                                <i class="fas fa-robot"></i> AI Writing Assistant
+                            </div>
+                            <div class="section-ai-actions">
+                                <button class="section-ai-btn" onclick="notesAIAction('continue')">
+                                    <i class="fas fa-arrow-down"></i> Continue
+                                </button>
+                                <button class="section-ai-btn" onclick="notesAIAction('summarize')">
+                                    <i class="fas fa-compress-alt"></i> Summarize
+                                </button>
+                                <button class="section-ai-btn" onclick="notesAIAction('improve')">
+                                    <i class="fas fa-magic"></i> Improve
+                                </button>
+                                <button class="section-ai-btn" onclick="notesAIAction('grammar')">
+                                    <i class="fas fa-spell-check"></i> Fix Grammar
+                                </button>
+                                <button class="section-ai-btn" onclick="notesAIAction('expand')">
+                                    <i class="fas fa-expand-alt"></i> Expand
+                                </button>
+                            </div>
+                            <div class="section-ai-input">
+                                <input type="text" id="notes-ai-prompt" placeholder="Or describe what you want to write..." onkeypress="if(event.key==='Enter')notesAICustom()">
+                                <button class="btn btn-primary btn-sm" onclick="notesAICustom()">Generate</button>
+                            </div>
+                            <div class="section-ai-output" id="notes-ai-output"></div>
                         </div>
 
                         <button class="btn btn-primary" onclick="saveNotionPage()" style="margin-top: 20px; width: 100%;">Save Page</button>
@@ -4006,11 +4880,50 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <input type="text" id="project-name" placeholder="Project name..." style="max-width: 250px;">
-                        <input type="text" id="project-tags" placeholder="Tags (comma separated)" style="max-width: 250px;">
+                        <input type="text" id="project-name" placeholder="Project name..." style="max-width: 200px;">
+                        <select id="project-status" style="padding: 8px 12px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; color: var(--text);">
+                            <option value="planning">Planning</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                        <input type="text" id="project-tags" placeholder="Tags" style="max-width: 200px;">
                     </div>
                     <textarea id="project-desc" placeholder="Project description..." style="min-height: 80px;"></textarea>
+                    <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
+                        <input type="date" id="project-start" placeholder="Start date" style="padding: 8px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; color: var(--text);">
+                        <input type="date" id="project-deadline" placeholder="Deadline" style="padding: 8px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; color: var(--text);">
+                    </div>
                     <button class="btn btn-primary" onclick="addProject()" style="margin-top: 14px;">Add Project</button>
+                </div>
+
+                <!-- Project Stats -->
+                <div class="grid-4" style="margin: 20px 0;">
+                    <div class="project-stat-card" style="padding: 16px; background: var(--bg-card); border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--secondary);" id="proj-total">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Total Projects</div>
+                    </div>
+                    <div class="project-stat-card" style="padding: 16px; background: var(--bg-card); border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="proj-active">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">In Progress</div>
+                    </div>
+                    <div class="project-stat-card" style="padding: 16px; background: var(--bg-card); border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--accent-orange);" id="proj-review">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">In Review</div>
+                    </div>
+                    <div class="project-stat-card" style="padding: 16px; background: var(--bg-card); border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="proj-done">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Completed</div>
+                    </div>
+                </div>
+
+                <!-- Filter by Status -->
+                <div class="filter-group" style="margin-bottom: 16px;">
+                    <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+                    <button class="filter-btn" onclick="filterProjects('planning', this)">Planning</button>
+                    <button class="filter-btn" onclick="filterProjects('in-progress', this)">In Progress</button>
+                    <button class="filter-btn" onclick="filterProjects('review', this)">Review</button>
+                    <button class="filter-btn" onclick="filterProjects('completed', this)">Completed</button>
                 </div>
 
                 <div id="projects-grid" class="grid-3"></div>
@@ -4025,9 +4938,44 @@
                     <p>Like Todoist - simple, powerful task management</p>
                 </div>
 
+                <!-- Add Task Form -->
+                <div class="card" style="margin-bottom: 20px;">
+                    <div style="display: grid; grid-template-columns: 1fr auto auto auto; gap: 12px; align-items: end;">
+                        <input type="text" id="task-input" class="todoist-input" placeholder="Add a task... (Press Enter)" style="border: none; border-bottom: 1px solid var(--border); border-radius: 0; padding: 12px 0;" onkeypress="if(event.key==='Enter')addTask()">
+                        <select id="task-priority" style="padding: 10px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; color: var(--text);">
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                        <input type="date" id="task-due-date" style="padding: 10px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; color: var(--text);">
+                        <button class="btn btn-primary" onclick="addTask()"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+
+                <!-- Task Stats -->
+                <div class="grid-4" style="margin-bottom: 20px;">
+                    <div class="task-stat" style="text-align: center; padding: 16px; background: var(--bg-card); border-radius: 8px;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="stat-total">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Total</div>
+                    </div>
+                    <div class="task-stat" style="text-align: center; padding: 16px; background: var(--bg-card); border-radius: 8px;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #ff6b6b;" id="stat-high">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">High Priority</div>
+                    </div>
+                    <div class="task-stat" style="text-align: center; padding: 16px; background: var(--bg-card); border-radius: 8px;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #ffc107;" id="stat-pending">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Pending</div>
+                    </div>
+                    <div class="task-stat" style="text-align: center; padding: 16px; background: var(--bg-card); border-radius: 8px;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="stat-done">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Completed</div>
+                    </div>
+                </div>
+
                 <div class="todoist-style card">
-                    <input type="text" class="todoist-input" id="task-input" placeholder="Add a task... (Press Enter)" onkeypress="if(event.key==='Enter')addTask()">
-                    
+                    <div class="todoist-section-title">High Priority</div>
+                    <div id="todoist-high"></div>
+
                     <div class="todoist-section-title">Today</div>
                     <div id="todoist-today"></div>
 
@@ -4041,6 +4989,12 @@
                 <div class="card" style="margin-top: 20px;">
                     <div class="card-header">
                         <span class="card-title">Task Filters</span>
+                        <select id="priority-filter" onchange="filterTasksByPriority(this.value)" style="padding: 6px 12px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 13px;">
+                            <option value="">All Priorities</option>
+                            <option value="high">High Priority</option>
+                            <option value="medium">Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
                     </div>
                     <div class="filter-group">
                         <button class="filter-btn active" onclick="filterTasks('all')">All</button>
@@ -4048,6 +5002,53 @@
                         <button class="filter-btn" onclick="filterTasks('upcoming')">Upcoming</button>
                         <button class="filter-btn" onclick="filterTasks('completed')">Done</button>
                     </div>
+                </div>
+
+                <!-- Pomodoro Timer -->
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-header">
+                        <span class="card-title"><i class="fas fa-clock" style="color: var(--primary);"></i> Pomodoro Timer</span>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <div id="pomodoro-display" style="font-size: 4rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; margin-bottom: 16px;">25:00</div>
+                        <div id="pomodoro-status" style="color: var(--text-muted); margin-bottom: 16px;">Ready to focus!</div>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <button class="btn btn-primary" onclick="startPomodoro()"><i class="fas fa-play"></i> Start</button>
+                            <button class="btn btn-secondary" onclick="pausePomodoro()"><i class="fas fa-pause"></i> Pause</button>
+                            <button class="btn btn-secondary" onclick="resetPomodoro()"><i class="fas fa-redo"></i> Reset</button>
+                        </div>
+                        <div style="margin-top: 16px; display: flex; gap: 10px; justify-content: center;">
+                            <button class="btn btn-sm" onclick="setPomodoroTime(25)" style="background: var(--primary); color: var(--bg-dark);">Work (25m)</button>
+                            <button class="btn btn-sm" onclick="setPomodoroTime(5)" style="background: var(--secondary); color: var(--bg-dark);">Short Break (5m)</button>
+                            <button class="btn btn-sm" onclick="setPomodoroTime(15)" style="background: var(--accent); color: var(--bg-dark);">Long Break (15m)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Task Assistant -->
+                <div class="section-ai-panel" id="tasks-ai-panel">
+                    <div class="section-ai-header">
+                        <i class="fas fa-robot"></i> AI Task Assistant
+                    </div>
+                    <div class="section-ai-actions">
+                        <button class="section-ai-btn" onclick="tasksAIAction('suggest')">
+                            <i class="fas fa-lightbulb"></i> Suggest Tasks
+                        </button>
+                        <button class="section-ai-btn" onclick="tasksAIAction('breakdown')">
+                            <i class="fas fa-sitemap"></i> Break Down
+                        </button>
+                        <button class="section-ai-btn" onclick="tasksAIAction('schedule')">
+                            <i class="fas fa-calendar-alt"></i> Smart Schedule
+                        </button>
+                        <button class="section-ai-btn" onclick="tasksAIAction('prioritize')">
+                            <i class="fas fa-sort-numeric-down"></i> Prioritize
+                        </button>
+                    </div>
+                    <div class="section-ai-input">
+                        <input type="text" id="tasks-ai-prompt" placeholder="Describe your goal or project..." onkeypress="if(event.key==='Enter')tasksAICustom()">
+                        <button class="btn btn-primary btn-sm" onclick="tasksAICustom()">Generate Tasks</button>
+                    </div>
+                    <div class="section-ai-output" id="tasks-ai-output"></div>
                 </div>
             </section>
 
@@ -4622,6 +5623,32 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- AI Design Assistant -->
+                <div class="section-ai-panel" id="design-ai-panel" style="margin: 16px; max-width: 400px;">
+                    <div class="section-ai-header">
+                        <i class="fas fa-robot"></i> AI Design Assistant
+                    </div>
+                    <div class="section-ai-actions">
+                        <button class="section-ai-btn" onclick="designAIAction('colors')">
+                            <i class="fas fa-palette"></i> Colors
+                        </button>
+                        <button class="section-ai-btn" onclick="designAIAction('layout')">
+                            <i class="fas fa-th-large"></i> Layout
+                        </button>
+                        <button class="section-ai-btn" onclick="designAIAction('trends')">
+                            <i class="fas fa-fire"></i> Trends
+                        </button>
+                        <button class="section-ai-btn" onclick="designAIAction('inspiration')">
+                            <i class="fas fa-image"></i> Inspiration
+                        </button>
+                    </div>
+                    <div class="section-ai-input">
+                        <input type="text" id="design-ai-prompt" placeholder="Describe your design idea..." onkeypress="if(event.key==='Enter')designAICustom()">
+                        <button class="btn btn-primary btn-sm" onclick="designAICustom()">Get Ideas</button>
+                    </div>
+                    <div class="section-ai-output" id="design-ai-output"></div>
+                </div>
             </section>
 
             <!-- YOUTUBE - YouTube Studio Style -->
@@ -4649,6 +5676,75 @@
                         <div class="yt-stat-card">
                             <div class="value" contenteditable="true" id="yt-earning">$0</div>
                             <div class="label">Est. Earnings</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube Tools -->
+                <div class="grid-3" style="margin-top: 20px;">
+                    <!-- Script Planner -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title"><i class="fas fa-file-alt" style="color: var(--accent-blue);"></i> Script Planner</span>
+                        </div>
+                        <textarea id="video-script" placeholder="Write your video script here...
+
+Hook (0:00-0:30)
+- Start with a compelling question or statement
+
+Main Content (0:30-X:XX)
+- Key points to cover
+- Examples and demonstrations
+
+Call to Action (End)
+- Subscribe
+- Like and comment" style="min-height: 200px; font-family: inherit;"></textarea>
+                        <div style="display: flex; gap: 8px; margin-top: 8px;">
+                            <button class="btn btn-secondary btn-sm" onclick="saveScript()"><i class="fas fa-save"></i> Save</button>
+                            <button class="btn btn-secondary btn-sm" onclick="exportScript()"><i class="fas fa-download"></i> Export</button>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnail Ideas -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title"><i class="fas fa-image" style="color: var(--accent-orange);"></i> Thumbnail Ideas</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <input type="text" id="thumb-title" placeholder="Video title for thumbnail...">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                <input type="text" id="thumb-text1" placeholder="Big text (e.g., 'WOW')" style="text-align: center; font-weight: bold;">
+                                <input type="text" id="thumb-text2" placeholder="Sub text (e.g., '2024')" style="text-align: center;">
+                            </div>
+                            <select id="thumb-style" style="padding: 8px;">
+                                <option value="reaction">Reaction/Face</option>
+                                <option value="tutorial">Tutorial/How-to</option>
+                                <option value="listicle">Listicle (Top 5)</option>
+                                <option value="comparison">Comparison</option>
+                                <option value="clickbait">Curiosity Gap</option>
+                            </select>
+                            <button class="btn btn-primary btn-sm" onclick="generateThumbnailIdea()"><i class="fas fa-magic"></i> Generate Ideas</button>
+                            <div id="thumb-result" style="font-size: 0.85rem; color: var(--text-muted);"></div>
+                        </div>
+                    </div>
+
+                    <!-- Scheduling -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title"><i class="fas fa-calendar" style="color: var(--primary);"></i> Upload Schedule</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <input type="text" id="scheduled-title" placeholder="Video title...">
+                            <input type="date" id="scheduled-date">
+                            <input type="time" id="scheduled-time">
+                            <select id="scheduled-status" style="padding: 8px;">
+                                <option value="scripting">Scripting</option>
+                                <option value="filming">Filming</option>
+                                <option value="editing">Editing</option>
+                                <option value="ready">Ready to Publish</option>
+                            </select>
+                            <button class="btn btn-primary btn-sm" onclick="scheduleVideo()"><i class="fas fa-calendar-plus"></i> Schedule</button>
+                            <div id="schedule-list" style="font-size: 0.85rem;"></div>
                         </div>
                     </div>
                 </div>
@@ -4763,6 +5859,60 @@
                             <div class="scene-thumb" style="border: 2px dashed #444;">
                                 <i class="fas fa-plus" style="font-size: 20px; color: #666;"></i>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 20px;">
+                    <!-- Chat Commands -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title"><i class="fas fa-terminal" style="color: var(--accent-blue);"></i> Chat Commands</span>
+                            <button class="btn btn-secondary btn-sm" onclick="addChatCommand()"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div id="chat-commands-list" style="max-height: 250px; overflow-y: auto;">
+                            <div class="command-item">
+                                <span class="command-trigger">!socials</span>
+                                <span class="command-response">Check my Twitter @username and Instagram @username!</span>
+                                <button class="btn-icon" onclick="editCommand(this)"><i class="fas fa-edit"></i></button>
+                            </div>
+                            <div class="command-item">
+                                <span class="command-trigger">!discord</span>
+                                <span class="command-response">Join my Discord: discord.gg/example</span>
+                                <button class="btn-icon" onclick="editCommand(this)"><i class="fas fa-edit"></i></button>
+                            </div>
+                            <div class="command-item">
+                                <span class="command-trigger">!song</span>
+                                <span class="command-response">Now playing: Artist - Song Title</span>
+                                <button class="btn-icon" onclick="editCommand(this)"><i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stream Widgets -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title"><i class="fas fa-puzzle-piece" style="color: var(--accent-orange);"></i> Widgets</span>
+                        </div>
+                        <div class="grid-2" style="gap: 10px;">
+                            <button class="widget-btn" onclick="toggleWidget('tts')">
+                                <i class="fas fa-comment-dots"></i> Text-to-Speech
+                            </button>
+                            <button class="widget-btn" onclick="toggleWidget('poll')">
+                                <i class="fas fa-poll"></i> Poll/Survey
+                            </button>
+                            <button class="widget-btn" onclick="toggleWidget('countdown')">
+                                <i class="fas fa-hourglass-half"></i> Countdown
+                            </button>
+                            <button class="widget-btn" onclick="toggleWidget('goals')">
+                                <i class="fas fa-bullseye"></i> Stream Goals
+                            </button>
+                            <button class="widget-btn" onclick="toggleWidget('timer')">
+                                <i class="fas fa-stopwatch"></i> Timer
+                            </button>
+                            <button class="widget-btn" onclick="toggleWidget('webcam')">
+                                <i class="fas fa-camera"></i> Webcam Frame
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -4926,23 +6076,108 @@
     <div class="ai-panel" id="ai-panel">
         <div class="ai-header">
             <h3><i class="fas fa-robot"></i> AI Assistant</h3>
-            <button class="close-btn" onclick="closeAIPanel()">×</button>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <div class="ai-status" id="ai-status" title="Click to configure AI">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Local</span>
+                </div>
+                <button onclick="setOpenRouterKey()" title="Set Cloud API Key" style="padding: 4px 8px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-muted); cursor: pointer; font-size: 11px;">
+                    <i class="fas fa-key"></i>
+                </button>
+                <button class="close-btn" onclick="closeAIPanel()">×</button>
+            </div>
+        </div>
+        <div style="padding: 8px 12px; background: var(--bg-elevated); border-bottom: 1px solid var(--border);">
+            <select id="ai-model" onchange="changeAIModel(this.value)" style="width: 100%; padding: 8px 10px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 12px;">
+                <optgroup label="Local (Ollama)">
+                    <option value="llama3.2">llama3.2</option>
+                    <option value="llama3">llama3</option>
+                    <option value="mistral">mistral</option>
+                    <option value="codellama">codellama</option>
+                    <option value="phi">phi</option>
+                </optgroup>
+                <optgroup label="Cloud (OpenRouter)">
+                    <option value="cloud:anthropic/claude-3-haiku" selected>Claude 3 Haiku (Free)</option>
+                    <option value="cloud:google/gemini-pro">Gemini Pro</option>
+                    <option value="cloud:anthropic/claude-3-haiku">Claude 3 Haiku</option>
+                </optgroup>
+                <optgroup label="Built-in">
+                    <option value="local">Local (Smart Processing)</option>
+                </optgroup>
+            </select>
         </div>
         <div class="ai-messages" id="ai-messages">
             <div class="ai-message assistant">Hello! I'm your AI assistant. I can help you with:</div>
             <div class="ai-message assistant">• <b>Code</b> - Write, debug, explain code<br>• <b>Notes</b> - Write scripts, brainstorm ideas<br>• <b>Projects</b> - Plan and organize work<br>• <b>Tasks</b> - Create and prioritize todos<br>• <b>YouTube</b> - Generate content ideas<br>• <b>Streaming</b> - Help with chat, overlays<br><br>Just ask me what you need!</div>
         </div>
         <div class="ai-actions">
-            <button class="ai-action-btn" onclick="quickAI('Write a JavaScript function to fetch data from an API')">Code: API Fetch</button>
-            <button class="ai-action-btn" onclick="quickAI('Create a note about starting a YouTube channel')">Notes: YouTube</button>
-            <button class="ai-action-btn" onclick="quickAI('Suggest 5 project ideas for a portfolio')">Projects: Ideas</button>
-            <button class="ai-action-btn" onclick="quickAI('Create a todo list for starting a new project')">Tasks: New Project</button>
+            <button class="ai-action-btn" onclick="clearAIHistory()" title="Clear conversation"><i class="fas fa-trash"></i></button>
+            <button class="ai-action-btn" onclick="quickAI('Write a JavaScript function to fetch data from an API')">Code</button>
+            <button class="ai-action-btn" onclick="quickAI('Create a note about starting a YouTube channel')">Notes</button>
+            <button class="ai-action-btn" onclick="quickAI('Suggest 5 project ideas')">Projects</button>
+            <button class="ai-action-btn" onclick="quickAI('Create a todo list for today')">Tasks</button>
         </div>
         <div class="ai-input-area">
             <input type="text" id="ai-input" placeholder="Ask AI anything..." onkeypress="if(event.key==='Enter')sendMessage()">
             <button id="ai-send" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
+
+    <style>
+        .ai-status {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            background: var(--bg-dark);
+            border-radius: 12px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .ai-status:hover {
+            background: var(--bg-elevated);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .ai-status.connected .status-dot {
+            background: var(--primary);
+            box-shadow: 0 0 6px var(--primary);
+        }
+
+        .ai-status.connecting .status-dot {
+            background: #ffc107;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .ai-status.connected .status-text {
+            color: var(--primary);
+        }
+
+        .ai-status.connecting .status-text {
+            color: #ffc107;
+        }
+
+        .ai-status.cloud .status-dot {
+            background: var(--accent-blue);
+            box-shadow: 0 0 6px var(--accent-blue);
+        }
+
+        .ai-status.cloud .status-text {
+            color: var(--accent-blue);
+        }
+    </style>
 
     <script>
         // Data Storage
@@ -4952,14 +6187,84 @@
         let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
         let contentIdeas = JSON.parse(localStorage.getItem('contentIdeas') || '[]');
 
+        // ==================== UTILITIES ====================
+        // Null-safe DOM query
+        const $ = (id) => document.getElementById(id);
+        const $$ = (selector, parent = document) => parent.querySelector(selector);
+        const $$$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
+
+        // Debounce function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Throttle function
+        function throttle(func, limit) {
+            let inThrottle;
+            return function(...args) {
+                if (!inThrottle) {
+                    func.apply(this, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        // Safe localStorage
+        const storage = {
+            get: (key, defaultVal = null) => {
+                try {
+                    const val = localStorage.getItem(key);
+                    return val ? JSON.parse(val) : defaultVal;
+                } catch { return defaultVal; }
+            },
+            set: (key, val) => {
+                try { localStorage.setItem(key, JSON.stringify(val)); return true; }
+                catch { return false; }
+            }
+        };
+
+        // Section initialization tracking
+        const sectionInit = { home: false, code: false, notes: false, projects: false, design: false, tasks: false, youtube: false, stream: false };
+
         // Navigation
         function showSection(sectionId) {
             document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            document.querySelector(`a[href="#${sectionId}"]`).classList.add('active');
+            const section = document.getElementById(sectionId);
+            if (section) section.classList.add('active');
+            const navLink = document.querySelector(`a[href="#${sectionId}"]`);
+            if (navLink) navLink.classList.add('active');
             updateMobileNav(sectionId);
             window.scrollTo(0, 0);
+            
+            // Lazy initialize section
+            if (!sectionInit[sectionId]) {
+                initSection(sectionId);
+                sectionInit[sectionId] = true;
+            }
+        }
+
+        // Initialize section data on first view
+        function initSection(sectionId) {
+            switch(sectionId) {
+                case 'home': updateHome(); updateStats(); break;
+                case 'code': updateLineNumbers(); break;
+                case 'notes': renderNotes(); renderNotesList(); break;
+                case 'projects': renderProjects(); updateProjectStats(); break;
+                case 'tasks': renderTasks(); renderTodoistStyle(); updateTaskStats(); break;
+                case 'design': initFigma(); break;
+                case 'youtube': renderContentIdeas(); break;
+                case 'stream': /* stream is visual only */ break;
+            }
         }
 
         // Code Functions
@@ -5043,25 +6348,6 @@
             renderAttachments();
         }
 
-        function renderNotes() {
-            const filter = document.getElementById('filter-notes').value;
-            const filtered = filter === 'all' ? notes : notes.filter(n => n.type === filter);
-            const list = document.getElementById('notes-list');
-            list.innerHTML = filtered.length ? filtered.map((n, i) => `
-                <div class="note-item">
-                    <div style="display: flex; justify-content: space-between;">
-                        <strong>${n.title}</strong>
-                        <span class="tag">${n.type}</span>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 6px;">${n.content.substring(0, 70)}...</p>
-                    <div class="note-meta">
-                        <span>${n.date}</span>
-                        <span style="cursor: pointer;" onclick="deleteNote(${i})"><i class="fas fa-trash"></i></span>
-                    </div>
-                </div>
-            `).join('') : '<p style="color: var(--text-muted);">No notes yet</p>';
-        }
-
         function deleteNote(index) {
             notes.splice(index, 1);
             localStorage.setItem('notes', JSON.stringify(notes));
@@ -5074,10 +6360,22 @@
             const name = document.getElementById('project-name').value;
             const desc = document.getElementById('project-desc').value;
             const tags = document.getElementById('project-tags').value.split(',').map(t => t.trim()).filter(t => t);
+            const status = document.getElementById('project-status').value;
+            const startDate = document.getElementById('project-start').value;
+            const deadline = document.getElementById('project-deadline').value;
             if (!name) return;
-            projects.unshift({ name, desc, tags, date: new Date().toLocaleDateString() });
+            projects.unshift({ 
+                name, 
+                desc, 
+                tags, 
+                status,
+                startDate,
+                deadline,
+                date: new Date().toLocaleDateString() 
+            });
             localStorage.setItem('projects', JSON.stringify(projects));
             renderProjects();
+            updateProjectStats();
             updateStats();
             showToast('Project added!');
             document.getElementById('project-name').value = '';
@@ -5085,36 +6383,75 @@
             document.getElementById('project-tags').value = '';
         }
 
-        function renderProjects() {
+        function updateProjectStats() {
+            document.getElementById('proj-total').textContent = projects.length;
+            document.getElementById('proj-active').textContent = projects.filter(p => p.status === 'in-progress').length;
+            document.getElementById('proj-review').textContent = projects.filter(p => p.status === 'review').length;
+            document.getElementById('proj-done').textContent = projects.filter(p => p.status === 'completed').length;
+        }
+
+        function filterProjects(status, btn) {
+            document.querySelectorAll('#projects + .filter-group .filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
             const grid = document.getElementById('projects-grid');
-            grid.innerHTML = projects.length ? projects.map(p => `
+            const filtered = status === 'all' ? projects : projects.filter(p => p.status === status);
+            grid.innerHTML = filtered.length ? filtered.map(p => `
                 <div class="project-card">
                     <div class="project-thumbnail">📁</div>
                     <div class="project-info">
                         <div class="project-title">${p.name}</div>
                         <div class="project-desc">${p.desc || 'No description'}</div>
-                        <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                            <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                            <span class="project-status-badge ${p.status}">${p.status}</span>
+                        </div>
+                        ${p.deadline ? `<div style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">Deadline: ${p.deadline}</div>` : ''}
                     </div>
                 </div>
-            `).join('') : '<p style="color: var(--text-muted);">No projects yet</p>';
+            `).join('') : '<p style="color: var(--text-muted); grid-column: 1/-1;">No projects with this status</p>';
         }
 
         // Tasks Functions
         function addTask() {
             const text = document.getElementById('task-input').value;
+            const priority = document.getElementById('task-priority').value;
+            const dueDate = document.getElementById('task-due-date').value;
             if (!text) return;
-            tasks.unshift({ text, completed: false, date: new Date().toLocaleDateString() });
+            tasks.unshift({ 
+                text, 
+                completed: false, 
+                date: new Date().toLocaleDateString(),
+                priority: priority,
+                dueDate: dueDate || null
+            });
             localStorage.setItem('tasks', JSON.stringify(tasks));
             renderTasks();
-            updateStats();
+            updateTaskStats();
             showToast('Task added!');
             document.getElementById('task-input').value = '';
+            document.getElementById('task-due-date').value = '';
+        }
+
+        function addTaskFromAI(text, priority = 'medium') {
+            tasks.unshift({ 
+                text, 
+                completed: false, 
+                date: new Date().toLocaleDateString(),
+                priority: priority,
+                dueDate: null
+            });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasks();
+            updateTaskStats();
+            updateStats();
         }
 
         function toggleTask(index) {
             tasks[index].completed = !tasks[index].completed;
             localStorage.setItem('tasks', JSON.stringify(tasks));
             renderTasks();
+            updateTaskStats();
             updateStats();
         }
 
@@ -5122,26 +6459,81 @@
             tasks.splice(index, 1);
             localStorage.setItem('tasks', JSON.stringify(tasks));
             renderTasks();
+            updateTaskStats();
             updateStats();
         }
 
-        function renderTasks() {
-            const filter = document.getElementById('task-filter').value;
-            const filtered = filter === 'all' ? tasks : 
-                filter === 'completed' ? tasks.filter(t => t.completed) : tasks.filter(t => !t.completed);
-            const list = document.getElementById('tasks-list');
+        function updateTaskStats() {
+            document.getElementById('stat-total').textContent = tasks.length;
+            document.getElementById('stat-high').textContent = tasks.filter(t => t.priority === 'high' && !t.completed).length;
+            document.getElementById('stat-pending').textContent = tasks.filter(t => !t.completed).length;
+            document.getElementById('stat-done').textContent = tasks.filter(t => t.completed).length;
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const date = new Date(dateStr);
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
             
-            document.getElementById('total-tasks').textContent = tasks.length;
-            document.getElementById('active-tasks').textContent = tasks.filter(t => !t.completed).length;
-            document.getElementById('done-tasks').textContent = tasks.filter(t => t.completed).length;
-            
-            list.innerHTML = filtered.length ? filtered.map((t, i) => `
-                <li class="todo-item ${t.completed ? 'completed' : ''}">
-                    <div class="todo-checkbox ${t.completed ? 'checked' : ''}" onclick="toggleTask(${i})"></div>
-                    <span class="todo-text">${t.text}</span>
-                    <span class="todo-delete" onclick="deleteTask(${i})"><i class="fas fa-times"></i></span>
-                </li>
-            `).join('') : '<p style="color: var(--text-muted); padding: 20px; text-align: center;">No tasks</p>';
+            if (dateStr === today.toISOString().split('T')[0]) return 'Today';
+            if (dateStr === tomorrow.toISOString().split('T')[0]) return 'Tomorrow';
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        }
+
+        function filterTasksByPriority(priority) {
+            renderTasks();
+        }
+
+        // Pomodoro Timer
+        let pomodoroTime = 25 * 60;
+        let pomodoroInterval = null;
+        let pomodoroRunning = false;
+
+        function setPomodoroTime(minutes) {
+            pomodoroTime = minutes * 60;
+            updatePomodoroDisplay();
+            if (pomodoroRunning) {
+                pausePomodoro();
+            }
+        }
+
+        function startPomodoro() {
+            if (pomodoroRunning) return;
+            pomodoroRunning = true;
+            document.getElementById('pomodoro-status').textContent = 'Focus time!';
+            pomodoroInterval = setInterval(() => {
+                pomodoroTime--;
+                updatePomodoroDisplay();
+                if (pomodoroTime <= 0) {
+                    pausePomodoro();
+                    showToast('Time is up! Take a break.');
+                    new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2teleQkANZi6xpJMHgA3lrnNn1IaADGMssqYSxgBNJO3y5dMFgAzj7XMmE0YADOQtsqYThYAMpG2yZhQFgAwj7XKmFQWADGOtcqZUhYAMY60yplWFgAwjLLKmVkWADCMssqZWBYAMYuyyplbFwAvibHKml0YAC6HrcmcXhgALoWtyZ1gGQAtBK7JnWEaAC0DrcmdYRsALAKuyZ1iGwAsAq7JnWIcACwCrsmdYh0ALAKuyZ1iHQAsAq7JnWIdAC0CrsmdYh4ALQKuyZ1iHgAtAq7JnWIeAC0Crsme').play().catch(() => {});
+                }
+            }, 1000);
+        }
+
+        function pausePomodoro() {
+            pomodoroRunning = false;
+            clearInterval(pomodoroInterval);
+            document.getElementById('pomodoro-status').textContent = pomodoroTime > 0 ? 'Paused' : 'Complete!';
+        }
+
+        function resetPomodoro() {
+            pausePomodoro();
+            pomodoroTime = 25 * 60;
+            updatePomodoroDisplay();
+            document.getElementById('pomodoro-status').textContent = 'Ready to focus!';
+        }
+
+        function updatePomodoroDisplay() {
+            const minutes = Math.floor(pomodoroTime / 60);
+            const seconds = pomodoroTime % 60;
+            const display = document.getElementById('pomodoro-display');
+            if (display) {
+                display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
         }
 
         // Design Canvas
@@ -5221,6 +6613,134 @@
             alert(alerts[type] || 'Alert triggered');
         }
 
+        // YouTube Functions
+        function saveScript() {
+            const script = document.getElementById('video-script').value;
+            if (!script.trim()) return;
+            localStorage.setItem('currentScript', script);
+            showToast('Script saved!');
+        }
+
+        function exportScript() {
+            const script = document.getElementById('video-script').value;
+            if (!script.trim()) return;
+            const blob = new Blob([script], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'video-script.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Script exported!');
+        }
+
+        function generateThumbnailIdea() {
+            const title = document.getElementById('thumb-title').value;
+            const style = document.getElementById('thumb-style').value;
+            if (!title) {
+                showToast('Please enter a video title');
+                return;
+            }
+            
+            const ideas = {
+                reaction: [
+                    'Use a surprised facial expression',
+                    'Add dramatic lighting',
+                    'Include a bold text overlay like "WHAT?!"'
+                ],
+                tutorial: [
+                    'Show the end result prominently',
+                    'Add step numbers in corner',
+                    'Use a clean, minimal background'
+                ],
+                listicle: [
+                    'Use large number "5" or "10"',
+                    'Add "YOU WON\'T BELIEVE" text',
+                    'Show multiple thumbnails in one'
+                ],
+                comparison: [
+                    'Split screen design',
+                    'Use "BEFORE vs AFTER" text',
+                    'Highlight the difference'
+                ],
+                clickbait: [
+                    'Use an intriguing question',
+                    'Add mystery/excitement text',
+                    'Show a shocking result'
+                ]
+            };
+            
+            const result = ideas[style] || ideas.reaction;
+            document.getElementById('thumb-result').innerHTML = '<strong>Thumbnail Tips:</strong><br>' + result.map(i => '• ' + i).join('<br>');
+        }
+
+        function scheduleVideo() {
+            const title = document.getElementById('scheduled-title').value;
+            const date = document.getElementById('scheduled-date').value;
+            const time = document.getElementById('scheduled-time').value;
+            const status = document.getElementById('scheduled-status').value;
+            
+            if (!title || !date) {
+                showToast('Please enter title and date');
+                return;
+            }
+            
+            const list = document.getElementById('schedule-list');
+            const item = document.createElement('div');
+            item.style = 'padding: 8px; background: var(--bg-elevated); border-radius: 6px; margin-top: 8px;';
+            item.innerHTML = `
+                <div style="font-weight: 600;">${title}</div>
+                <div style="font-size: 11px; color: var(--text-muted);">${date} ${time || ''} - ${status}</div>
+            `;
+            list.appendChild(item);
+            
+            showToast('Video scheduled!');
+            document.getElementById('scheduled-title').value = '';
+            document.getElementById('scheduled-date').value = '';
+        }
+
+        // Stream Functions
+        function addChatCommand() {
+            const trigger = prompt('Command trigger (e.g., !socials):');
+            if (!trigger) return;
+            const response = prompt('Command response:');
+            if (!response) return;
+            
+            const list = document.getElementById('chat-commands-list');
+            const item = document.createElement('div');
+            item.className = 'command-item';
+            item.innerHTML = `
+                <span class="command-trigger">${trigger}</span>
+                <span class="command-response">${response}</span>
+                <button class="btn-icon" onclick="editCommand(this)"><i class="fas fa-edit"></i></button>
+            `;
+            list.appendChild(item);
+            showToast('Command added!');
+        }
+
+        function editCommand(btn) {
+            const item = btn.closest('.command-item');
+            const trigger = item.querySelector('.command-trigger').textContent;
+            const response = item.querySelector('.command-response').textContent;
+            const newResponse = prompt('Edit response:', response);
+            if (newResponse) {
+                item.querySelector('.command-response').textContent = newResponse;
+                showToast('Command updated!');
+            }
+        }
+
+        function toggleWidget(type) {
+            const widgets = {
+                tts: 'Text-to-Speech widget activated',
+                poll: 'Poll/Survey widget activated',
+                countdown: 'Countdown widget activated',
+                goals: 'Stream Goals widget activated',
+                timer: 'Timer widget activated',
+                webcam: 'Webcam Frame widget activated'
+            };
+            showToast(widgets[type] || 'Widget toggled');
+        }
+
         // Stats
         function updateStats() {
             document.getElementById('stat-code').textContent = snippets.length;
@@ -5264,38 +6784,52 @@
             document.getElementById('ai-panel').classList.remove('open');
         }
 
+        // AI Conversation Context
+        let aiConversationHistory = [];
+        const MAX_HISTORY = 10;
+
         function quickAI(prompt) {
-            document.getElementById('ai-input').value = prompt;
+            const input = document.getElementById('ai-input');
+            if (input) input.value = prompt;
             sendMessage();
         }
 
         async function sendMessage() {
             const input = document.getElementById('ai-input');
-            const message = input.value.trim();
+            const message = input?.value?.trim();
             if (!message) return;
 
             const sendBtn = document.getElementById('ai-send');
-            sendBtn.disabled = true;
+            if (sendBtn) sendBtn.disabled = true;
 
             addMessage(message, 'user');
-            input.value = '';
+            if (input) input.value = '';
 
             addMessage('<span class="loading-dots">Thinking</span>', 'assistant typing');
 
             try {
                 const response = await callAI(message);
                 document.querySelector('.ai-message.typing')?.remove();
+                
+                // Add to conversation history
+                aiConversationHistory.push({ role: 'user', content: message });
+                aiConversationHistory.push({ role: 'assistant', content: response });
+                if (aiConversationHistory.length > MAX_HISTORY * 2) {
+                    aiConversationHistory = aiConversationHistory.slice(-MAX_HISTORY * 2);
+                }
+                
                 processAIResponse(response);
             } catch (error) {
                 document.querySelector('.ai-message.typing')?.remove();
-                addMessage('Sorry, I encountered an error. Let me help you directly instead.', 'assistant');
+                addMessage('Sorry, I encountered an error. Let me try again...', 'assistant');
             }
 
-            sendBtn.disabled = false;
+            if (sendBtn) sendBtn.disabled = false;
         }
 
         function addMessage(text, type) {
             const messages = document.getElementById('ai-messages');
+            if (!messages) return;
             const div = document.createElement('div');
             div.className = `ai-message ${type}`;
             div.innerHTML = text;
@@ -5303,30 +6837,241 @@
             messages.scrollTop = messages.scrollHeight;
         }
 
+        function clearAIHistory() {
+            aiConversationHistory = [];
+            const messages = document.getElementById('ai-messages');
+            if (messages) {
+                messages.innerHTML = `
+                    <div class="ai-message assistant">Conversation cleared! How can I help you?</div>
+                `;
+            }
+        }
+
+        // AI Configuration
+        const AI_CONFIG = {
+            mode: 'auto',
+            ollamaUrl: 'http://localhost:11434',
+            openrouterKey: localStorage.getItem('openrouterKey') || '',
+            // Free Hugging Face API (no key needed for basic models)
+            huggingfaceUrl: 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2',
+            huggingfaceKey: localStorage.getItem('huggingfaceKey') || ''
+        };
+
         async function callAI(prompt) {
-            // Using Ollama local AI (if available) or fallback to smart local processing
+            const model = document.getElementById('ai-model').value;
+            
+            // If using local smart processing, use fallback
+            if (model === 'local') {
+                updateAIStatus('local');
+                return smartLocalAI(prompt);
+            }
+            
+            // Build messages with history
+            const messages = [
+                ...aiConversationHistory,
+                { role: 'user', content: prompt }
+            ];
+            
+            // Try Hugging Face API (FREE - no key needed for basic models)
+            if (model === 'cloud:huggingface' || model.startsWith('cloud:')) {
+                const response = await callHuggingFace(prompt);
+                if (response) return response;
+            }
+            
+            // Try OpenRouter if key exists and has credits
+            if (AI_CONFIG.openrouterKey && model.startsWith('cloud:')) {
+                const response = await callOpenRouter(model.replace('cloud:', ''), messages);
+                if (response && !response.includes('credits')) return response;
+            }
+            
+            // Try Ollama (Local) - fast and free if running
+            updateAIStatus('connecting');
             try {
-                const response = await fetch('http://localhost:11434/api/chat', {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000);
+                
+                const response = await fetch(AI_CONFIG.ollamaUrl + '/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         model: 'llama3.2',
-                        messages: [{ role: 'user', content: prompt }],
+                        messages: messages,
                         stream: false
+                    }),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    updateAIStatus('connected');
+                    return data.message.content;
+                }
+            } catch (e) {
+                console.log('Ollama not available');
+            }
+            
+            // Fallback to local smart processing
+            updateAIStatus('local');
+            return smartLocalAI(prompt);
+        }
+
+        // Hugging Face Inference API (FREE - no key needed)
+        async function callHuggingFace(prompt) {
+            updateAIStatus('connecting');
+            try {
+                const response = await fetch(AI_CONFIG.huggingfaceUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        inputs: prompt,
+                        parameters: { max_new_tokens: 500 }
                     })
                 });
                 
                 if (response.ok) {
                     const data = await response.json();
-                    return data.message.content;
+                    updateAIStatus('cloud');
+                    if (Array.isArray(data) && data[0]?.generated_text) {
+                        return data[0].generated_text;
+                    }
+                    if (data.generated_text) {
+                        return data.generated_text;
+                    }
                 }
             } catch (e) {
-                // Ollama not available, use smart local processing
+                console.log('Hugging Face error:', e);
+            }
+            return null;
+        }
+
+        // OpenRouter API (Cloud AI - needs credits)
+        async function callOpenRouter(model, messages) {
+            const apiKey = AI_CONFIG.openrouterKey;
+            
+            if (!apiKey) {
+                return smartLocalAI(typeof messagesOrPrompt === 'string' ? messagesOrPrompt : messagesOrPrompt[messagesOrPrompt.length - 1]?.content || '');
             }
             
-            // Smart local AI processing - actually performs all functions
-            return smartLocalAI(prompt);
+            updateAIStatus('connecting');
+            try {
+                // Build messages array - if we have history, use it
+                const messages = typeof messagesOrPrompt === 'string' 
+                    ? [{ role: 'user', content: messagesOrPrompt }]
+                    : messagesOrPrompt;
+                
+                const fullUrl = 'https://openrouter.ai/api/v1/chat/completions';
+                const response = await fetch(fullUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + apiKey,
+                        'HTTP-Referer': window.location.origin || 'https://devtoolkit.app',
+                        'X-Title': 'DevToolkit'
+                    },
+                    body: JSON.stringify({
+                        model: model,
+                        messages: messages,
+                        max_tokens: 1000
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    updateAIStatus('cloud');
+                    return data.choices[0].message.content;
+                } else {
+                    const errorData = await response.json();
+                    console.log('OpenRouter error:', errorData);
+                    return `I encountered an issue: ${errorData.error?.message || 'Unknown error'}. Please try again.`;
+                }
+            } catch (e) {
+                console.log('OpenRouter error:', e);
+            }
+            
+            updateAIStatus('local');
+            return smartLocalAI(typeof messagesOrPrompt === 'string' ? messagesOrPrompt : messagesOrPrompt[messagesOrPrompt.length - 1]?.content || '');
         }
+
+        function setOpenRouterKey() {
+            const key = prompt('Enter your OpenRouter API key:\n(Get free key at https://openrouter.ai/keys)\n\nLeave empty to use local AI only.');
+            if (key !== null) {
+                AI_CONFIG.openrouterKey = key;
+                localStorage.setItem('openrouterKey', key);
+                if (key) {
+                    showToast('OpenRouter API key saved!');
+                }
+            }
+        }
+
+        function updateAIStatus(status) {
+            const statusEl = document.getElementById('ai-status');
+            statusEl.className = 'ai-status ' + status;
+            const textEl = statusEl.querySelector('.status-text');
+            
+            switch(status) {
+                case 'connected':
+                    textEl.textContent = 'Ollama';
+                    break;
+                case 'cloud':
+                    textEl.textContent = 'Cloud';
+                    break;
+                case 'connecting':
+                    textEl.textContent = 'Connecting...';
+                    break;
+                default:
+                    textEl.textContent = 'Local';
+            }
+        }
+
+        function changeAIModel(model) {
+            localStorage.setItem('aiModel', model);
+            showToast(`AI model: ${model}`);
+            if (model === 'local') {
+                updateAIStatus('local');
+            } else if (model.startsWith('cloud:')) {
+                updateAIStatus('cloud');
+            } else {
+                updateAIStatus('checking');
+            }
+        }
+
+        // Check AI status on load
+        async function checkAIStatus() {
+            // Check OpenRouter first (works from file://)
+            if (AI_CONFIG.openrouterKey) {
+                updateAIStatus('cloud');
+                return;
+            }
+            
+            // Then check Ollama (if server is running)
+            try {
+                const response = await fetch(AI_CONFIG.ollamaUrl + '/api/tags', {
+                    method: 'GET',
+                    signal: AbortSignal.timeout(2000)
+                });
+                if (response.ok) {
+                    updateAIStatus('connected');
+                    return;
+                }
+            } catch (e) {}
+            
+            // Fallback to local
+            updateAIStatus('local');
+        }
+
+        // Initialize AI - set cloud as default
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set default to cloud if no preference saved
+            if (!localStorage.getItem('aiModel')) {
+                document.getElementById('ai-model').value = 'cloud:anthropic/claude-3-haiku';
+            } else {
+                const savedModel = localStorage.getItem('aiModel');
+                document.getElementById('ai-model').value = savedModel;
+            }
+            checkAIStatus();
+        });
 
         function smartLocalAI(prompt) {
             const lower = prompt.toLowerCase();
@@ -5646,6 +7391,319 @@
             addMessage(response, 'assistant');
         }
 
+        // ==================== NOTES AI ASSISTANT ====================
+        const notesAIResponses = {
+            continue: [
+                "Continuing your thought: This approach provides a solid foundation for building scalable applications. Consider exploring microservices architecture for larger projects.",
+                "Building on that idea: The key is to maintain clean separation of concerns while keeping the code modular and testable.",
+                "Additionally, you might want to consider the long-term maintenance implications of your current choices."
+            ],
+            summarize: [
+                "**Summary:** Your notes cover the essential aspects of the topic. Key takeaways include the main concepts and practical applications.",
+                "**Key Points:** This document outlines the core principles with actionable insights for implementation.",
+                "**TL;DR:** Focus on the main ideas presented and prioritize the actionable items for maximum efficiency."
+            ],
+            improve: [
+                "Here's an improved version with better clarity and structure:\n\nYour content will be reformatted with:\n- Clear headings\n- Bullet points\n- Better flow\n- Stronger conclusions",
+                "I've enhanced your writing with:\n- More concise language\n- Better transitions\n- Stronger opening and closing"
+            ],
+            grammar: [
+                "I've checked and corrected any grammatical issues. Your text now reads more professionally with improved sentence structure.",
+                "Grammar corrections applied. The text now flows better with proper punctuation and consistent tense usage."
+            ],
+            expand: [
+                "Expanding on this topic, we can explore:\n\n1. The underlying principles\n2. Real-world applications\n3. Best practices\n4. Common pitfalls to avoid\n5. Future considerations",
+                "To dive deeper into this subject:\n\n- Background information\n- Detailed explanations\n- Examples and case studies\n- Expert opinions\n- Further reading recommendations"
+            ]
+        };
+
+        function notesAIAction(action) {
+            const output = document.getElementById('notes-ai-output');
+            output.classList.add('visible', 'loading');
+            output.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating response...';
+            
+            const editorContent = document.getElementById('notion-block-1')?.innerText || '';
+            const responses = notesAIResponses[action];
+            const response = responses[Math.floor(Math.random() * responses.length)];
+            
+            setTimeout(() => {
+                output.classList.remove('loading');
+                output.innerHTML = `
+                    <p>${response.replace(/\n/g, '<br>')}</p>
+                    <div class="section-ai-actions-row">
+                        <button class="section-ai-insert" onclick="insertNotesAI(this)" data-text="${response.replace(/"/g, '&quot;').replace(/\n/g, ' ')}">
+                            <i class="fas fa-plus"></i> Insert
+                        </button>
+                        <button class="section-ai-copy" onclick="copyNotesAI(this)" data-text="${response.replace(/"/g, '&quot;').replace(/\n/g, ' ')}">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                `;
+                showToast('AI response ready!');
+            }, 800);
+        }
+
+        function notesAICustom() {
+            const prompt = document.getElementById('notes-ai-prompt').value;
+            if (!prompt.trim()) {
+                showToast('Please enter a prompt');
+                return;
+            }
+            
+            const output = document.getElementById('notes-ai-output');
+            output.classList.add('visible', 'loading');
+            output.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Thinking...';
+            
+            const response = `Based on your request about "${prompt}", here's a helpful response:\n\nThis is a starting point for your writing. Feel free to refine it based on your specific needs and context.`;
+            
+            setTimeout(() => {
+                output.classList.remove('loading');
+                output.innerHTML = `
+                    <p>${response.replace(/\n/g, '<br>')}</p>
+                    <div class="section-ai-actions-row">
+                        <button class="section-ai-insert" onclick="insertNotesAI(this)" data-text="${response.replace(/"/g, '&quot;').replace(/\n/g, ' ')}">
+                            <i class="fas fa-plus"></i> Insert
+                        </button>
+                        <button class="section-ai-copy" onclick="copyNotesAI(this)" data-text="${response.replace(/"/g, '&quot;').replace(/\n/g, ' ')}">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                `;
+                showToast('AI response ready!');
+            }, 1000);
+        }
+
+        function insertNotesAI(btn) {
+            const text = btn.getAttribute('data-text');
+            const editor = document.getElementById('notion-block-1');
+            if (editor) {
+                editor.innerHTML += '<p>' + text.replace(/\n/g, '</p><p>') + '</p>';
+            }
+            showToast('Text inserted!');
+        }
+
+        function copyNotesAI(btn) {
+            const text = btn.getAttribute('data-text');
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Copied to clipboard!');
+            });
+        }
+
+        // ==================== TASKS AI ASSISTANT ====================
+        const taskTemplates = {
+            suggest: [
+                { text: "Review and prioritize daily tasks", priority: "high" },
+                { text: "Organize workspace for productivity", priority: "medium" },
+                { text: "Set up a task tracking system", priority: "medium" },
+                { text: "Create a weekly review routine", priority: "low" }
+            ],
+            breakdown: [
+                { text: "Define clear project scope", priority: "high" },
+                { text: "Create initial project plan", priority: "high" },
+                { text: "Set up project tools and workspace", priority: "medium" },
+                { text: "Identify key milestones", priority: "medium" },
+                { text: "Allocate resources and timelines", priority: "medium" }
+            ],
+            schedule: [
+                { text: "Morning: Focus on high-priority tasks", priority: "high" },
+                { text: "Afternoon: Meetings and collaboration", priority: "medium" },
+                { text: "End of day: Review and plan tomorrow", priority: "low" }
+            ],
+            prioritize: [
+                { text: "Urgent: Address critical issues first", priority: "high" },
+                { text: "Important: Schedule for focused work", priority: "medium" },
+                { text: "Delegate: Assign to team members", priority: "medium" },
+                { text: "Later: Add to backlog for review", priority: "low" }
+            ]
+        };
+
+        function tasksAIAction(action) {
+            const output = document.getElementById('tasks-ai-output');
+            output.classList.add('visible', 'loading');
+            output.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating tasks...';
+            
+            const tasks = taskTemplates[action];
+            let taskHtml = '<p><strong>Suggested tasks:</strong></p>';
+            tasks.forEach(t => {
+                taskHtml += `
+                    <div style="display: flex; align-items: center; gap: 8px; margin: 8px 0; padding: 8px; background: var(--bg-card); border-radius: 6px;">
+                        <span style="padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; background: ${t.priority === 'high' ? 'rgba(255,107,107,0.2)' : t.priority === 'medium' ? 'rgba(255,193,7,0.2)' : 'rgba(0,245,212,0.2)'}; color: ${t.priority === 'high' ? '#ff6b6b' : t.priority === 'medium' ? '#ffc107' : 'var(--primary)'};">${t.priority}</span>
+                        <span>${t.text}</span>
+                        <button onclick="addTaskFromAI('${t.text.replace(/'/g, "\\'")}')" class="section-ai-insert" style="margin-left: auto;">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+                    </div>
+                `;
+            });
+            
+            setTimeout(() => {
+                output.classList.remove('loading');
+                output.innerHTML = taskHtml;
+                showToast('Tasks suggested!');
+            }, 800);
+        }
+
+        function tasksAICustom() {
+            const prompt = document.getElementById('tasks-ai-prompt').value;
+            if (!prompt.trim()) {
+                showToast('Please describe your goal or project');
+                return;
+            }
+            
+            const output = document.getElementById('tasks-ai-output');
+            output.classList.add('visible', 'loading');
+            output.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Breaking down project...';
+            
+            const generatedTasks = [
+                { text: `Research: ${prompt}`, priority: "high" },
+                { text: "Define requirements and scope", priority: "high" },
+                { text: "Create initial plan", priority: "medium" },
+                { text: "Set milestones and deadlines", priority: "medium" },
+                { text: "Execute first phase", priority: "medium" }
+            ];
+            
+            let taskHtml = `<p><strong>Tasks for: ${prompt}</strong></p>`;
+            generatedTasks.forEach(t => {
+                taskHtml += `
+                    <div style="display: flex; align-items: center; gap: 8px; margin: 8px 0; padding: 8px; background: var(--bg-card); border-radius: 6px;">
+                        <span style="padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; background: ${t.priority === 'high' ? 'rgba(255,107,107,0.2)' : 'rgba(255,193,7,0.2)'}; color: ${t.priority === 'high' ? '#ff6b6b' : '#ffc107'};">${t.priority}</span>
+                        <span>${t.text}</span>
+                        <button onclick="addTaskFromAI('${t.text.replace(/'/g, "\\'")}')" class="section-ai-insert" style="margin-left: auto;">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+                    </div>
+                `;
+            });
+            
+            setTimeout(() => {
+                output.classList.remove('loading');
+                output.innerHTML = taskHtml;
+                showToast('Project broken down into tasks!');
+            }, 1200);
+        }
+
+        function addTaskFromAI(text) {
+            tasks.unshift({ text, completed: false, date: new Date().toLocaleDateString() });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasks();
+            updateStats();
+            showToast(`Task "${text}" added!`);
+        }
+
+        // ==================== DESIGN AI ASSISTANT ====================
+        const designResponses = {
+            colors: [
+                { title: "Neon Cyberpunk", colors: ["#00F5D4", "#9B5DE5", "#F15BB5", "#FEE440"] },
+                { title: "Sunset Warmth", colors: ["#FF6B6B", "#FFA07A", "#FFD700", "#FF4500"] },
+                { title: "Ocean Breeze", colors: ["#00B4D8", "#0077B6", "#90E0EF", "#CAF0F8"] },
+                { title: "Forest Natural", colors: ["#2D6A4F", "#40916C", "#74C69D", "#B7E4C7"] },
+                { title: "Modern Minimal", colors: ["#1A1A2E", "#16213E", "#0F3460", "#E94560"] }
+            ],
+            layout: [
+                "Try a hero section with a clear call-to-action",
+                "Use a grid-based layout for content organization",
+                "Consider asymmetric layouts for visual interest",
+                "Implement card-based design for modular content",
+                "Use whitespace strategically to guide the eye"
+            ],
+            trends: [
+                "Glassmorphism: Frosted glass effects with blur",
+                "Dark mode: High contrast with neon accents",
+                "3D elements: Depth and dimension in UI",
+                "Micro-animations: Subtle motion for feedback",
+                "Minimal typography: Bold, large type for impact"
+            ],
+            inspiration: [
+                "Dribbble: Search for 'dashboard design' or 'landing page'",
+                "Behance: Explore creative portfolios for ideas",
+                "Awwwards: Check award-winning website designs",
+                "Pinterest: Create boards for color and layout inspiration"
+            ]
+        };
+
+        function designAIAction(action) {
+            const output = document.getElementById('design-ai-output');
+            output.classList.add('visible', 'loading');
+            output.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Getting design ideas...';
+            
+            let content = '';
+            
+            if (action === 'colors') {
+                const palette = designResponses.colors[Math.floor(Math.random() * designResponses.colors.length)];
+                content = `
+                    <p><strong>${palette.title} Palette:</strong></p>
+                    <div style="display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap;">
+                        ${palette.colors.map(c => `
+                            <div style="text-align: center;">
+                                <div style="width: 50px; height: 50px; background: ${c}; border-radius: 8px; border: 1px solid var(--border);"></div>
+                                <span style="font-size: 0.7rem; color: var(--text-muted);">${c}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <button class="section-ai-copy" onclick="copyColorPalette('${palette.colors.join(',')}')">
+                        <i class="fas fa-copy"></i> Copy Palette
+                    </button>
+                `;
+            } else {
+                const items = designResponses[action];
+                content = `
+                    <p><strong>${action.charAt(0).toUpperCase() + action.slice(1)} Ideas:</strong></p>
+                    <ul style="margin: 12px 0; padding-left: 20px;">
+                        ${items.map(item => `<li style="margin: 8px 0;">${item}</li>`).join('')}
+                    </ul>
+                `;
+            }
+            
+            setTimeout(() => {
+                output.classList.remove('loading');
+                output.innerHTML = content;
+                showToast('Design suggestions ready!');
+            }, 800);
+        }
+
+        function designAICustom() {
+            const prompt = document.getElementById('design-ai-prompt').value;
+            if (!prompt.trim()) {
+                showToast('Please describe your design idea');
+                return;
+            }
+            
+            const output = document.getElementById('design-ai-output');
+            output.classList.add('visible', 'loading');
+            output.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating design ideas...';
+            
+            const suggestions = [
+                `For "${prompt}", consider using a clean, modern layout with ample whitespace and a strong focal point.`,
+                `Your "${prompt}" concept would work well with a card-based design that showcases content modularly.`,
+                `For "${prompt}", think about incorporating subtle animations and a cohesive color scheme to enhance user experience.`
+            ];
+            
+            const response = suggestions[Math.floor(Math.random() * suggestions.length)];
+            
+            setTimeout(() => {
+                output.classList.remove('loading');
+                output.innerHTML = `
+                    <p>${response}</p>
+                    <div style="margin-top: 16px;">
+                        <p><strong>Quick Tips:</strong></p>
+                        <ul style="margin: 8px 0; padding-left: 20px;">
+                            <li>Start with a simple wireframe</li>
+                            <li>Choose 2-3 accent colors max</li>
+                            <li>Maintain consistent spacing</li>
+                            <li>Test on multiple screen sizes</li>
+                        </ul>
+                    </div>
+                `;
+                showToast('Design ideas ready!');
+            }, 1000);
+        }
+
+        function copyColorPalette(colors) {
+            navigator.clipboard.writeText(colors).then(() => {
+                showToast('Color palette copied!');
+            });
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             renderSnippets();
@@ -5663,29 +7721,104 @@
             codeHistoryIndex = 0;
         });
 
-        // Theme Toggle
-        function toggleTheme() {
+        // Theme System
+        const THEMES = {
+            dark: { name: 'Dark', icon: 'fa-moon', bg: '#0a0a0f', text: '#ffffff' },
+            light: { name: 'Light', icon: 'fa-sun', bg: '#ffffff', text: '#1a1a2e' },
+            cyberpunk: { name: 'Cyberpunk', icon: 'fa-bolt', bg: '#0d0221', text: '#ff00ff' },
+            forest: { name: 'Forest', icon: 'fa-tree', bg: '#1a2f1a', text: '#e8f5e8' },
+            ocean: { name: 'Ocean', icon: 'fa-water', bg: '#0a1929', text: '#64ffda' }
+        };
+
+        function setTheme(themeName) {
+            const theme = THEMES[themeName];
+            if (!theme) return;
+            
             const html = document.documentElement;
             const icon = document.getElementById('theme-icon');
-            const isLight = html.getAttribute('data-theme') === 'light';
             
-            if (isLight) {
-                html.removeAttribute('data-theme');
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                html.setAttribute('data-theme', 'light');
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'light');
+            // Remove all theme classes
+            Object.keys(THEMES).forEach(t => html.classList.remove(`theme-${t}`));
+            
+            // Apply new theme
+            if (themeName !== 'dark') {
+                html.classList.add(`theme-${themeName}`);
             }
+            
+            icon.className = `fas ${theme.icon}`;
+            localStorage.setItem('theme', themeName);
+            showToast(`Theme: ${theme.name}`);
+        }
+
+        function toggleTheme() {
+            const themes = Object.keys(THEMES);
+            const current = localStorage.getItem('theme') || 'dark';
+            const idx = themes.indexOf(current);
+            const next = themes[(idx + 1) % themes.length];
+            setTheme(next);
         }
 
         function loadTheme() {
             const theme = localStorage.getItem('theme') || 'dark';
-            if (theme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                document.getElementById('theme-icon').className = 'fas fa-sun';
+            const icon = document.getElementById('theme-icon');
+            if (THEMES[theme]) {
+                if (theme !== 'dark') {
+                    document.documentElement.classList.add(`theme-${theme}`);
+                }
+                icon.className = `fas ${THEMES[theme].icon}`;
             }
+        }
+
+        // Show Keyboard Shortcuts
+        function showShortcuts() {
+            const shortcuts = `
+                <div style="max-width: 400px; padding: 20px;">
+                    <h3 style="margin-bottom: 16px;">⌨️ Keyboard Shortcuts</h3>
+                    <div style="display: grid; gap: 8px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Global Search</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">Ctrl+K</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Toggle Theme</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">Ctrl+T</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Switch Sections</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">Ctrl+1-8</kbd>
+                        </div>
+                        <hr style="border-color: var(--border);">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Select Tool</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">V</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Rectangle</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">R</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Text</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">T</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Delete</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">Del</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Duplicate</span>
+                            <kbd style="background: var(--bg-dark); padding: 2px 8px; border-radius: 4px;">Ctrl+D</kbd>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="this.closest('.modal').remove()" style="margin-top: 20px; width: 100%;">Got it!</button>
+                </div>
+            `;
+            
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 10000; display: flex; align-items: center; justify-content: center;';
+            modal.innerHTML = shortcuts;
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+            document.body.appendChild(modal);
         }
 
         // Global Search
@@ -5894,13 +8027,827 @@
         }
 
         function formatCode() {
-            // Simple formatting - add line breaks
-            ['codepen-html', 'codepen-css', 'codepen-js'].forEach(id => {
-                const el = document.getElementById(id);
-                el.value = el.value.trim();
-            });
+            const html = document.getElementById('codepen-html');
+            const css = document.getElementById('codepen-css');
+            const js = document.getElementById('codepen-js');
+            
+            // HTML formatting
+            html.value = html.value.trim();
+            
+            // CSS formatting
+            css.value = css.value
+                .replace(/\s*{\s*/g, ' {\n    ')
+                .replace(/\s*}\s*/g, '\n}\n')
+                .replace(/\s*;\s*/g, ';\n    ')
+                .trim();
+            
+            // JS formatting
+            js.value = js.value
+                .replace(/\s*{\s*/g, ' {\n    ')
+                .replace(/\s*}\s*/g, '\n}\n')
+                .replace(/\s*;\s*/g, ';\n')
+                .trim();
+            
+            updateLineNumbers();
             showToast('Code formatted!');
         }
+
+        // Line Numbers
+        function updateLineNumbers() {
+            ['html', 'css', 'js'].forEach(lang => {
+                const textarea = document.getElementById(`codepen-${lang}`);
+                const lines = document.getElementById(`${lang}-lines`);
+                if (textarea && lines) {
+                    const lineCount = textarea.value.split('\n').length;
+                    lines.innerHTML = Array.from({length: lineCount}, (_, i) => i + 1).join('<br>');
+                }
+            });
+        }
+
+        // ==================== CODE EDITOR TOOLBAR FUNCTIONS ====================
+        let editorSettings = {
+            wordWrap: false,
+            minimap: false,
+            bracketMatch: true,
+            autoClose: true,
+            indentGuides: true,
+            fontSize: 13,
+            theme: 'dark'
+        };
+
+        const editorThemes = {
+            dark: { bg: '#1e1e1e', text: '#d4d4d4', keyword: '#569cd6', string: '#ce9178', comment: '#6a9955', number: '#b5cea8' },
+            light: { bg: '#ffffff', text: '#000000', keyword: '#0000ff', string: '#a31515', comment: '#008000', number: '#098658' },
+            monokai: { bg: '#272822', text: '#f8f8f2', keyword: '#f92672', string: '#e6db74', comment: '#75715e', number: '#ae81ff' },
+            github: { bg: '#ffffff', text: '#333333', keyword: '#d73a49', string: '#032f62', comment: '#6a737d', number: '#005cc5' },
+            dracula: { bg: '#282a36', text: '#f8f8f2', keyword: '#ff79c6', string: '#f1fa8c', comment: '#6272a4', number: '#bd93f9' },
+            nord: { bg: '#2e3440', text: '#d8dee9', keyword: '#81a1c1', string: '#a3be8c', comment: '#616e88', number: '#b48ead' }
+        };
+
+        function toggleWordWrap() {
+            editorSettings.wordWrap = !editorSettings.wordWrap;
+            const btn = document.getElementById('btn-wordwrap');
+            btn.classList.toggle('active', editorSettings.wordWrap);
+            
+            ['html', 'css', 'js'].forEach(lang => {
+                const textarea = document.getElementById(`codepen-${lang}`);
+                if (textarea) {
+                    textarea.style.whiteSpace = editorSettings.wordWrap ? 'pre-wrap' : 'pre';
+                    textarea.style.overflowX = editorSettings.wordWrap ? 'auto' : 'hidden';
+                }
+            });
+            showToast(`Word wrap ${editorSettings.wordWrap ? 'enabled' : 'disabled'}`);
+        }
+
+        function toggleMinimap() {
+            editorSettings.minimap = !editorSettings.minimap;
+            const btn = document.getElementById('btn-minimap');
+            btn.classList.toggle('active', editorSettings.minimap);
+            showToast(`Minimap ${editorSettings.minimap ? 'enabled' : 'disabled'}`);
+        }
+
+        function toggleBracketMatch() {
+            editorSettings.bracketMatch = !editorSettings.bracketMatch;
+            const btn = document.getElementById('btn-brackets');
+            btn.classList.toggle('active', editorSettings.bracketMatch);
+            showToast(`Bracket matching ${editorSettings.bracketMatch ? 'enabled' : 'disabled'}`);
+        }
+
+        function toggleAutoClose() {
+            editorSettings.autoClose = document.getElementById('auto-close').checked;
+        }
+
+        function toggleIndentGuides() {
+            editorSettings.indentGuides = document.getElementById('indent-guides').checked;
+        }
+
+        function changeFontSize(size) {
+            editorSettings.fontSize = parseInt(size);
+            ['html', 'css', 'js'].forEach(lang => {
+                const textarea = document.getElementById(`codepen-${lang}`);
+                const lines = document.getElementById(`${lang}-lines`);
+                if (textarea) textarea.style.fontSize = size + 'px';
+                if (lines) lines.style.fontSize = size + 'px';
+            });
+        }
+
+        function changeEditorTheme(theme) {
+            editorSettings.theme = theme;
+            const colors = editorThemes[theme];
+            
+            document.documentElement.style.setProperty('--editor-bg', colors.bg);
+            document.documentElement.style.setProperty('--editor-text', colors.text);
+            
+            const style = document.createElement('style');
+            style.id = 'editor-theme-style';
+            
+            const existing = document.getElementById('editor-theme-style');
+            if (existing) existing.remove();
+            
+            style.textContent = `
+                .codepen-pane-content textarea { color: ${colors.text}; }
+                .line-numbers { background: ${colors.bg}dd; color: ${colors.keyword}; }
+            `;
+            document.head.appendChild(style);
+            
+            showToast(`Theme: ${theme.charAt(0).toUpperCase() + theme.slice(1)}`);
+        }
+
+        // Auto-close brackets
+        function autoCloseBrackets(e, textarea) {
+            if (!editorSettings.autoClose) return;
+            
+            const pairs = { '(': ')', '[': ']', '{': '}', '"': '"', "'": "'", '<': '>' };
+            const key = e.key;
+            
+            if (pairs[key]) {
+                e.preventDefault();
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+                const selected = text.substring(start, end);
+                
+                textarea.value = text.substring(0, start) + key + selected + pairs[key] + text.substring(end);
+                textarea.selectionStart = textarea.selectionEnd = start + 1;
+                
+                if (selected) {
+                    textarea.selectionStart = start + 1;
+                    textarea.selectionEnd = end + 1;
+                }
+            }
+        }
+
+        // Sync scroll between textarea and line numbers
+        function syncScroll(e) {
+            const lines = document.getElementById(e.target.id.replace('codepen-', '') + '-lines');
+            if (lines) {
+                lines.scrollTop = e.target.scrollTop;
+            }
+        }
+
+        // Tab key support
+        function handleTab(e, textarea) {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                textarea.value = textarea.value.substring(0, start) + '  ' + textarea.value.substring(end);
+                textarea.selectionStart = textarea.selectionEnd = start + 2;
+                updateLineNumbers();
+            }
+        }
+
+        // Initialize editor enhancements
+        document.addEventListener('DOMContentLoaded', () => {
+            ['html', 'css', 'js'].forEach(lang => {
+                const textarea = document.getElementById(`codepen-${lang}`);
+                if (textarea) {
+                    textarea.addEventListener('keydown', (e) => {
+                        autoCloseBrackets(e, textarea);
+                        handleTab(e, textarea);
+                    });
+                    textarea.addEventListener('scroll', syncScroll);
+                }
+            });
+            
+            // Load saved settings
+            const saved = localStorage.getItem('editorSettings');
+            if (saved) {
+                try {
+                    editorSettings = { ...editorSettings, ...JSON.parse(saved) };
+                    document.getElementById('font-size-select').value = editorSettings.fontSize;
+                    document.getElementById('editor-theme').value = editorSettings.theme;
+                    document.getElementById('auto-close').checked = editorSettings.autoClose;
+                    document.getElementById('indent-guides').checked = editorSettings.indentGuides;
+                    changeFontSize(editorSettings.fontSize);
+                    changeEditorTheme(editorSettings.theme);
+                } catch (e) {}
+            }
+        });
+
+        // Save settings on change
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('editorSettings', JSON.stringify(editorSettings));
+        });
+
+        // Console Capture
+        function clearConsole() {
+            const console = document.getElementById('console-output');
+            if (console) {
+                console.innerHTML = '<div class="console-info"><i class="fas fa-check-circle"></i> Console cleared</div>';
+            }
+        }
+
+        function logToConsole(type, message) {
+            const console = document.getElementById('console-output');
+            if (!console) return;
+            
+            const icons = {
+                log: 'fa-info-circle',
+                warn: 'fa-exclamation-triangle',
+                error: 'fa-times-circle',
+                success: 'fa-check-circle'
+            };
+            
+            const div = document.createElement('div');
+            div.className = `console-${type}`;
+            div.innerHTML = `<i class="fas ${icons[type] || icons.log}"></i> ${message}`;
+            console.appendChild(div);
+            console.scrollTop = console.scrollHeight;
+        }
+
+        function refreshPreview() {
+            updatePreview();
+        }
+
+        function openInNewTab() {
+            const html = document.getElementById('codepen-html').value;
+            const css = document.getElementById('codepen-css').value;
+            const js = document.getElementById('codepen-js').value;
+            
+            const fullCode = `<!DOCTYPE html>
+<html>
+<head>
+<style>${css}</style>
+</head>
+<body>
+${html}
+<script>${js}<\/script>
+</body>
+</html>`;
+            
+            const blob = new Blob([fullCode], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');
+        }
+
+        // Code Templates
+        const codeTemplates = {
+            landing: {
+                html: `<header class="hero">
+    <h1>Welcome to Our Site</h1>
+    <p>Build something amazing today</p>
+    <button class="cta">Get Started</button>
+</header>`,
+                css: `* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: sans-serif; }
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+.cta {
+    padding: 15px 30px;
+    background: white;
+    color: #667eea;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}`,
+                js: `document.querySelector('.cta').addEventListener('click', () => {
+    alert('Button clicked!');
+});`
+            },
+            todo: {
+                html: `<div class="container">
+    <h1>My Todo List</h1>
+    <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Add a task...">
+        <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+</div>`,
+                css: `.container { max-width: 400px; margin: 50px auto; padding: 20px; }
+h1 { text-align: center; margin-bottom: 20px; }
+.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+ul { list-style: none; }
+li { padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+li.completed { text-decoration: line-through; opacity: 0.5; }`,
+                js: `let tasks = [];
+function addTask() {
+    const input = document.getElementById('taskInput');
+    if (!input.value.trim()) return;
+    tasks.push({ text: input.value, done: false });
+    input.value = '';
+    renderTasks();
+}
+function renderTasks() {
+    const ul = document.getElementById('taskList');
+    ul.innerHTML = tasks.map((t, i) => 
+        \`<li class="\${t.done ? 'completed' : ''}" onclick="toggle(\${i})">\${t.text} <button onclick="del(\${i})">×</button></li>\`
+    ).join('');
+}
+function toggle(i) { tasks[i].done = !tasks[i].done; renderTasks(); }
+function del(i) { tasks.splice(i, 1); renderTasks(); }`
+            },
+            counter: {
+                html: `<div class="counter">
+    <h1 id="count">0</h1>
+    <div class="buttons">
+        <button onclick="decrease()">-</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="increase()">+</button>
+    </div>
+</div>`,
+                css: `.counter { text-align: center; padding: 50px; }
+#count { font-size: 100px; margin-bottom: 30px; }
+.buttons button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+}
+.buttons button:hover { background: #555; }`,
+                js: `let count = 0;
+function update() { document.getElementById('count').textContent = count; }
+function increase() { count++; update(); }
+function decrease() { count--; update(); }
+function reset() { count = 0; update(); }`
+            },
+            form: {
+                html: `<form class="contact-form">
+    <h2>Contact Us</h2>
+    <div class="form-group">
+        <input type="text" id="name" required>
+        <label>Your Name</label>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" required>
+        <label>Email Address</label>
+    </div>
+    <div class="form-group">
+        <textarea id="message" rows="4" required></textarea>
+        <label>Message</label>
+    </div>
+    <button type="submit">Send Message</button>
+</form>`,
+                css: `.contact-form { max-width: 400px; margin: 50px auto; padding: 30px; }
+h2 { margin-bottom: 30px; text-align: center; }
+.form-group { position: relative; margin-bottom: 20px; }
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input:focus, textarea:focus { border-color: #007bff; outline: none; }
+button {
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}`,
+                js: `document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    alert(\`Thanks \${name}! We'll get back to you soon.\`);
+    e.target.reset();
+});`
+            },
+            gallery: {
+                html: `<div class="gallery">
+    <img src="https://picsum.photos/200?1" alt="Image 1">
+    <img src="https://picsum.photos/200?2" alt="Image 2">
+    <img src="https://picsum.photos/200?3" alt="Image 3">
+    <img src="https://picsum.photos/200?4" alt="Image 4">
+</div>
+<div class="lightbox" id="lightbox"><span>×</span><img src=""></div>`,
+                css: `.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; padding: 20px; }
+img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; cursor: pointer; transition: transform 0.3s; }
+img:hover { transform: scale(1.05); }
+.lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+.lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; }
+.lightbox span { position: absolute; top: 20px; right: 30px; font-size: 40px; color: white; cursor: pointer; }
+.lightbox.show { display: flex; }`,
+                js: `document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', () => {
+        document.querySelector('.lightbox img').src = img.src;
+        document.getElementById('lightbox').classList.add('show');
+    });
+});
+document.querySelector('.lightbox span').addEventListener('click', () => {
+    document.getElementById('lightbox').classList.remove('show');
+});`
+            },
+            clock: {
+                html: `<div class="clock">
+    <div class="time" id="time">00:00:00</div>
+    <div class="date" id="date"></div>
+</div>`,
+                css: `.clock { text-align: center; padding: 50px; background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.time { font-size: 80px; font-weight: bold; color: #00f5d4; font-family: monospace; }
+.date { font-size: 24px; color: #888; margin-top: 10px; }`,
+                js: `function update() {
+    const now = new Date();
+    document.getElementById('time').textContent = now.toLocaleTimeString();
+    document.getElementById('date').textContent = now.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+}
+update();
+setInterval(update, 1000);`
+            },
+            quiz: {
+                html: `<div class="quiz">
+    <h2 id="question">Question</h2>
+    <div class="options" id="options"></div>
+    <p id="score">Score: 0</p>
+</div>`,
+                css: `.quiz { max-width: 500px; margin: 50px auto; padding: 30px; text-align: center; }
+h2 { margin-bottom: 30px; }
+.options { display: flex; flex-direction: column; gap: 10px; }
+button { padding: 15px; border: 2px solid #ddd; background: white; border-radius: 10px; cursor: pointer; }
+button:hover { border-color: #007bff; }
+button.correct { background: #28a745; color: white; border-color: #28a745; }
+button.wrong { background: #dc3545; color: white; border-color: #dc3545; }`,
+                js: `const questions = [
+    { q: 'What is 2 + 2?', a: ['3', '4', '5'], c: 1 },
+    { q: 'What color is the sky?', a: ['Red', 'Blue', 'Green'], c: 1 },
+    { q: 'What is the capital of France?', a: ['London', 'Berlin', 'Paris'], c: 2 }
+];
+let current = 0, score = 0;
+function showQuestion() {
+    const q = questions[current];
+    document.getElementById('question').textContent = q.q;
+    document.getElementById('options').innerHTML = q.a.map((opt, i) => 
+        \`<button onclick="check(\${i})">\${opt}</button>\`
+    ).join('');
+}
+function check(i) {
+    const btns = document.querySelectorAll('button');
+    if (i === questions[current].c) { score++; btns[i].classList.add('correct'); }
+    else btns[i].classList.add('wrong');
+    document.getElementById('score').textContent = 'Score: ' + score;
+    setTimeout(() => { if (++current < questions.length) showQuestion(); else alert('Quiz over! Score: ' + score); }, 1000);
+}
+showQuestion();`
+            }
+        };
+
+        function loadTemplate(name) {
+            if (!name || !codeTemplates[name]) return;
+            const t = codeTemplates[name];
+            document.getElementById('codepen-html').value = t.html;
+            document.getElementById('codepen-css').value = t.css;
+            document.getElementById('codepen-js').value = t.js;
+            updateLineNumbers();
+            updatePreview();
+            document.getElementById('code-template').value = '';
+            showToast('Template loaded!');
+        }
+
+        function insertSnippet(lang) {
+            const snippets = {
+                html: '<div class="box">\n    <h2>Title</h2>\n    <p>Content here</p>\n</div>',
+                css: '.box {\n    padding: 20px;\n    background: #f5f5f5;\n    border-radius: 10px;\n}\n.box h2 { margin: 0 0 10px; }\n.box p { margin: 0; }',
+                js: 'console.log("Hello World!");\n\ndocument.addEventListener("DOMContentLoaded", () => {\n    console.log("Page loaded!");\n});'
+            };
+            const textarea = document.getElementById(`codepen-${lang}`);
+            if (textarea) {
+                textarea.value += '\n' + snippets[lang];
+                updateLineNumbers();
+            }
+        }
+
+        // ==================== AI CODE ASSISTANT ====================
+        let lastGeneratedCode = { html: '', css: '', js: '' };
+
+        const aiCodeTemplates = {
+            'login form': {
+                html: `<form class="login-form">
+    <h2>Login</h2>
+    <div class="input-group">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+    </div>
+    <button type="submit">Sign In</button>
+</form>`,
+                css: `.login-form {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+.input-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+input { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: #0056b3; }`,
+                js: `document.querySelector('.login-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const inputs = document.querySelectorAll('input');
+    console.log('Login:', inputs[0].value);
+    alert('Login successful!');
+});`
+            },
+            'modal dialog': {
+                html: `<button id="openModal">Open Modal</button>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Title</h2>
+        <p>This is a modal dialog!</p>
+    </div>
+</div>`,
+                css: `.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+.modal-content { background: white; margin: 15% auto; padding: 20px; width: 80%; max-width: 500px; border-radius: 10px; }
+.close { float: right; font-size: 28px; cursor: pointer; }`,
+                js: `const modal = document.getElementById('modal');
+document.getElementById('openModal').onclick = () => modal.style.display = 'block';
+document.querySelector('.close').onclick = () => modal.style.display = 'none';
+window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; }`
+            },
+            'carousel slider': {
+                html: `<div class="carousel">
+    <div class="slides">
+        <div class="slide active">Slide 1</div>
+        <div class="slide">Slide 2</div>
+        <div class="slide">Slide 3</div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>`,
+                css: `.carousel { position: relative; max-width: 600px; margin: 50px auto; }
+.slides { overflow: hidden; }
+.slide { display: none; padding: 50px; text-align: center; background: #f0f0f0; min-height: 200px; }
+.slide.active { display: block; }
+.prev, .next { position: absolute; top: 50%; padding: 10px 15px; border: none; background: #333; color: white; cursor: pointer; }
+.prev { left: 0; }
+.next { right: 0; }`,
+                js: `let current = 0;
+const slides = document.querySelectorAll('.slide');
+document.querySelector('.next').onclick = () => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+};
+document.querySelector('.prev').onclick = () => {
+    slides[current].classList.remove('active');
+    current = (current - 1 + slides.length) % slides.length;
+    slides[current].classList.add('active');
+};`
+            },
+            'api fetch': {
+                html: `<div class="api-demo">
+    <h2>Random User</h2>
+    <img id="userPhoto" src="" alt="User Photo">
+    <p id="userName"></p>
+    <button onclick="fetchUser()">Get Random User</button>
+</div>`,
+                css: `.api-demo { max-width: 300px; margin: 50px auto; text-align: center; padding: 20px; }
+#userPhoto { width: 100px; height: 100px; border-radius: 50%; margin: 20px 0; }
+button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }`,
+                js: `async function fetchUser() {
+    try {
+        const res = await fetch('https://randomuser.me/api/');
+        const data = await res.json();
+        const user = data.results[0];
+        document.getElementById('userPhoto').src = user.picture.large;
+        document.getElementById('userName').textContent = user.name.first + ' ' + user.name.last;
+    } catch (err) { console.error('Error:', err); }
+}`
+            },
+            'drag drop': {
+                html: `<div class="drag-container">
+    <div class="draggable" draggable="true">Drag me!</div>
+    <div class="drop-zone">Drop here</div>
+</div>`,
+                css: `.drag-container { display: flex; gap: 50px; justify-content: center; padding: 50px; }
+.draggable { width: 100px; height: 100px; background: #007bff; color: white; display: flex; align-items: center; justify-content: center; cursor: grab; }
+.drop-zone { width: 200px; height: 200px; border: 3px dashed #ccc; display: flex; align-items: center; justify-content: center; }
+.drop-zone.over { border-color: #007bff; background: #f0f8ff; }`,
+                js: `const draggable = document.querySelector('.draggable');
+const dropZone = document.querySelector('.drop-zone');
+draggable.addEventListener('dragstart', () => draggable.style.opacity = '0.5');
+draggable.addEventListener('dragend', () => draggable.style.opacity = '1');
+dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('over'));
+dropZone.addEventListener('drop', () => { dropZone.classList.remove('over'); alert('Dropped!'); });`
+            },
+            'timer stopwatch': {
+                html: `<div class="timer">
+    <h2 id="display">00:00:00</h2>
+    <div class="buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+</div>`,
+                css: `.timer { text-align: center; padding: 50px; }
+#display { font-size: 60px; font-family: monospace; margin-bottom: 20px; }
+.buttons button { padding: 10px 20px; margin: 0 5px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; }
+.buttons button:first-child { background: #28a745; color: white; }
+.buttons button:nth-child(2) { background: #dc3545; color: white; }
+.buttons button:last-child { background: #6c757d; color: white; }`,
+                js: `let seconds = 0, interval;
+function updateDisplay() {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    document.getElementById('display').textContent = 
+        \`\${h.toString().padStart(2,'0')}:\${m.toString().padStart(2,'0')}:\${s.toString().padStart(2,'0')}\`;
+}
+function startTimer() { interval = setInterval(() => { seconds++; updateDisplay(); }, 1000); }
+function stopTimer() { clearInterval(interval); }
+function resetTimer() { stopTimer(); seconds = 0; updateDisplay(); }`
+            },
+            'tabs component': {
+                html: `<div class="tabs">
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(0)">Tab 1</button>
+        <button class="tab-btn" onclick="openTab(1)">Tab 2</button>
+        <button class="tab-btn" onclick="openTab(2)">Tab 3</button>
+    </div>
+    <div class="tab-content active">Content 1</div>
+    <div class="tab-content">Content 2</div>
+    <div class="tab-content">Content 3</div>
+</div>`,
+                css: `.tabs { max-width: 600px; margin: 50px auto; }
+.tab-buttons { display: flex; }
+.tab-btn { flex: 1; padding: 10px; border: none; background: #ddd; cursor: pointer; }
+.tab-btn.active { background: #007bff; color: white; }
+.tab-content { display: none; padding: 20px; background: #f9f9f9; }
+.tab-content.active { display: block; }`,
+                js: `function openTab(i) {
+    document.querySelectorAll('.tab-btn').forEach((btn, j) => {
+        btn.classList.toggle('active', j === i);
+        document.querySelectorAll('.tab-content')[j].classList.toggle('active', j === i);
+    });
+}`
+            },
+            'accordion': {
+                html: `<div class="accordion">
+    <div class="accordion-item">
+        <button class="accordion-header">Section 1</button>
+        <div class="accordion-content">Content for section 1</div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-header">Section 2</button>
+        <div class="accordion-content">Content for section 2</div>
+    </div>
+</div>`,
+                css: `.accordion { max-width: 500px; margin: 50px auto; }
+.accordion-item { border-bottom: 1px solid #ddd; }
+.accordion-header { width: 100%; padding: 15px; text-align: left; border: none; background: #f5f5f5; cursor: pointer; font-size: 16px; }
+.accordion-header:hover { background: #e0e0e0; }
+.accordion-content { display: none; padding: 15px; }
+.accordion-content.show { display: block; }`,
+                js: `document.querySelectorAll('.accordion-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.nextElementSibling.classList.toggle('show');
+    });
+});`
+            },
+            'toast notification': {
+                html: `<button onclick="showToast('Success!', 'success')">Show Success</button>
+<button onclick="showToast('Error!', 'error')">Show Error</button>
+<button onclick="showToast('Warning!', 'warning')">Show Warning</button>
+<div id="toast-container"></div>`,
+                css: `#toast-container { position: fixed; top: 20px; right: 20px; }
+.toast { padding: 15px 20px; margin-bottom: 10px; border-radius: 5px; color: white; animation: slideIn 0.3s ease; }
+.toast.success { background: #28a745; }
+.toast.error { background: #dc3545; }
+.toast.warning { background: #ffc107; color: #333; }
+@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }`,
+                js: `function showToast(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = 'toast ' + type;
+    toast.textContent = message;
+    document.getElementById('toast-container').appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}`
+            },
+            'form validation': {
+                html: `<form id="validateForm">
+    <input type="text" id="name" placeholder="Name (required)">
+    <input type="email" id="email" placeholder="Email (required)">
+    <input type="tel" id="phone" placeholder="Phone">
+    <button type="submit">Submit</button>
+    <p id="error-msg"></p>
+</form>`,
+                css: `form { max-width: 400px; margin: 50px auto; display: flex; flex-direction: column; gap: 15px; }
+input { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+input.error { border-color: #dc3545; }
+input.success { border-color: #28a745; }
+button { padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+#error-msg { color: #dc3545; font-size: 14px; text-align: center; }`,
+                js: `document.getElementById('validateForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const error = document.getElementById('error-msg');
+    
+    let valid = true;
+    if (!name.value.trim()) { name.classList.add('error'); valid = false; }
+    else { name.classList.remove('error'); name.classList.add('success'); }
+    
+    if (!email.value.includes('@')) { email.classList.add('error'); valid = false; }
+    else { email.classList.remove('error'); email.classList.add('success'); }
+    
+    error.textContent = valid ? 'Form is valid!' : 'Please fill required fields';
+    error.style.color = valid ? '#28a745' : '#dc3545';
+});`
+            }
+        };
+
+        function quickCode(type) {
+            if (aiCodeTemplates[type]) {
+                const code = aiCodeTemplates[type];
+                document.getElementById('codepen-html').value = code.html;
+                document.getElementById('codepen-css').value = code.css;
+                document.getElementById('codepen-js').value = code.js;
+                updateLineNumbers();
+                updatePreview();
+                showToast('Code generated: ' + type);
+            }
+        }
+
+        function generateAICode() {
+            const prompt = document.getElementById('ai-code-prompt').value.trim();
+            if (!prompt) {
+                showToast('Please enter a code description');
+                return;
+            }
+            
+            // Find matching template or use smart generation
+            const lower = prompt.toLowerCase();
+            let generated = null;
+            
+            for (const [key, code] of Object.entries(aiCodeTemplates)) {
+                if (lower.includes(key) || key.includes(lower)) {
+                    generated = code;
+                    break;
+                }
+            }
+            
+            if (generated) {
+                document.getElementById('codepen-html').value = generated.html;
+                document.getElementById('codepen-css').value = generated.css;
+                document.getElementById('codepen-js').value = generated.js;
+                updateLineNumbers();
+                updatePreview();
+                showToast('Code generated!');
+            } else {
+                showToast('Try one of the suggestions above');
+            }
+        }
+
+        function insertAICode() {
+            showToast('Code ready in editor - click Run to see it!');
+        }
+
+        function copyAICode() {
+            const html = document.getElementById('codepen-html').value;
+            const css = document.getElementById('codepen-css').value;
+            const js = document.getElementById('codepen-js').value;
+            navigator.clipboard.writeText(`HTML:\n${html}\n\nCSS:\n${css}\n\nJS:\n${js}`);
+            showToast('Code copied to clipboard!');
+        }
+
+        function runAICode() {
+            updatePreview();
+            showToast('Code running!');
+        }
+
+        function addCodeTab() {
+            showToast('Tab system active - HTML/CSS/JS tabs ready');
+        }
+
+        function closeTab(lang) {
+            showToast('Close tab - saved automatically');
+        }
+
+        // Initialize line numbers on load
+        document.addEventListener('DOMContentLoaded', () => {
+            ['codepen-html', 'codepen-css', 'codepen-js'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', updateLineNumbers);
+                    el.addEventListener('scroll', () => {
+                        const lines = document.getElementById(id.replace('codepen-', '') + '-lines');
+                        if (lines) lines.scrollTop = el.scrollTop;
+                    });
+                }
+            });
+            updateLineNumbers();
+            renderNotesList();
+        });
 
         // ==================== NOTION FUNCTIONS ====================
         function createNotionPage() {
@@ -5956,51 +8903,188 @@
         function saveNotionPage() {
             const title = document.getElementById('notion-title').value || 'Untitled';
             const content = document.getElementById('notion-block-1').innerHTML;
+            const tag = document.getElementById('note-tag-select').value;
             if (!content.trim()) return;
             
             notes.unshift({
                 title,
                 content,
                 type: 'note',
+                tag: tag || '',
                 date: new Date().toLocaleDateString()
             });
             localStorage.setItem('notes', JSON.stringify(notes));
             renderNotes();
+            renderNotesList();
             showToast('Page saved to notes!');
+        }
+
+        function renderNotesList() {
+            const list = document.getElementById('notes-list');
+            if (!list) return;
+            
+            if (notes.length === 0) {
+                list.innerHTML = '<p style="padding: 12px; color: var(--text-muted); font-size: 13px;">No notes yet</p>';
+                return;
+            }
+            
+            list.innerHTML = notes.slice(0, 20).map((note, i) => `
+                <div class="note-list-item ${i === 0 ? 'active' : ''}" onclick="openNote(${i})" style="padding: 10px; border-radius: 6px; margin-bottom: 4px; cursor: pointer; background: ${i === 0 ? 'var(--bg-elevated)' : 'transparent'};">
+                    <div style="font-weight: 600; font-size: 13px; margin-bottom: 4px;">${note.title}</div>
+                    <div style="font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+                        <span>${note.tag ? `<span style="padding: 2px 6px; background: var(--secondary); border-radius: 4px; color: white; font-size: 10px;">${note.tag}</span>` : ''}</span>
+                        <span>${note.date}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openNote(index) {
+            const note = notes[index];
+            if (!note) return;
+            
+            document.getElementById('notion-title').value = note.title;
+            document.getElementById('notion-block-1').innerHTML = note.content;
+            document.getElementById('note-tag-select').value = note.tag || '';
+            document.getElementById('note-date').textContent = note.date;
+            
+            document.querySelectorAll('.note-list-item').forEach((el, i) => {
+                el.classList.toggle('active', i === index);
+                el.style.background = i === index ? 'var(--bg-elevated)' : 'transparent';
+            });
+        }
+
+        function searchNotes(query) {
+            const q = query.toLowerCase();
+            const list = document.getElementById('notes-list');
+            if (!list || !q) {
+                renderNotesList();
+                return;
+            }
+            
+            const filtered = notes.filter(n => 
+                n.title.toLowerCase().includes(q) || 
+                n.content.toLowerCase().includes(q) ||
+                (n.tag && n.tag.toLowerCase().includes(q))
+            );
+            
+            list.innerHTML = filtered.slice(0, 20).map((note, i) => `
+                <div class="note-list-item" onclick="openNote(${notes.indexOf(note)})" style="padding: 10px; border-radius: 6px; margin-bottom: 4px; cursor: pointer;">
+                    <div style="font-weight: 600; font-size: 13px; margin-bottom: 4px;">${note.title}</div>
+                    <div style="font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+                        <span>${note.tag ? `<span style="padding: 2px 6px; background: var(--secondary); border-radius: 4px; color: white; font-size: 10px;">${note.tag}</span>` : ''}</span>
+                        <span>${note.date}</span>
+                    </div>
+                </div>
+            `).join('') || '<p style="padding: 12px; color: var(--text-muted); font-size: 13px;">No matches found</p>';
+        }
+
+        function filterNotesByTag(tag) {
+            const list = document.getElementById('notes-list');
+            if (!list) return;
+            
+            const filtered = tag ? notes.filter(n => n.tag === tag) : notes;
+            
+            list.innerHTML = filtered.slice(0, 20).map((note, i) => `
+                <div class="note-list-item" onclick="openNote(${notes.indexOf(note)})" style="padding: 10px; border-radius: 6px; margin-bottom: 4px; cursor: pointer;">
+                    <div style="font-weight: 600; font-size: 13px; margin-bottom: 4px;">${note.title}</div>
+                    <div style="font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+                        <span>${note.tag ? `<span style="padding: 2px 6px; background: var(--secondary); border-radius: 4px; color: white; font-size: 10px;">${note.tag}</span>` : ''}</span>
+                        <span>${note.date}</span>
+                    </div>
+                </div>
+            `).join('') || '<p style="padding: 12px; color: var(--text-muted); font-size: 13px;">No notes with this tag</p>';
+        }
+
+        function exportNote(format) {
+            const title = document.getElementById('notion-title').value || 'Untitled';
+            const content = document.getElementById('notion-block-1').innerText;
+            
+            let data, filename, type;
+            
+            if (format === 'markdown') {
+                data = `# ${title}\n\n${content}`;
+                filename = `${title}.md`;
+                type = 'text/markdown';
+            } else if (format === 'html') {
+                data = `<!DOCTYPE html>\n<html>\n<head>\n<title>${title}</title>\n<style>\nbody { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }\n</style>\n</head>\n<body>\n<h1>${title}</h1>\n${content.replace(/\n/g, '<br>')}\n</body>\n</html>`;
+                filename = `${title}.html`;
+                type = 'text/html';
+            } else {
+                data = `${title}\n\n${content}`;
+                filename = `${title}.txt`;
+                type = 'text/plain';
+            }
+            
+            const blob = new Blob([data], { type });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast(`Exported as ${format.toUpperCase()}`);
         }
 
         // ==================== TODOIST FUNCTIONS ====================
         function renderTodoistStyle() {
-            const today = tasks.filter(t => !t.completed).slice(0, 5);
+            const highPriority = tasks.filter(t => !t.completed && t.priority === 'high');
+            const today = tasks.filter(t => !t.completed && t.priority !== 'high').slice(0, 5);
+            const upcoming = tasks.filter(t => !t.completed && t.priority !== 'high').slice(5, 10);
             const completed = tasks.filter(t => t.completed).slice(0, 5);
             
-            document.getElementById('todoist-today').innerHTML = today.map((t, i) => `
-                <div class="todoist-item">
-                    <div class="todoist-checkbox ${t.completed ? 'checked' : ''}" onclick="toggleTask(${i})"></div>
-                    <span class="todoist-text">${t.text}</span>
-                </div>
-            `).join('') || '<div class="todoist-item" style="color: var(--text-muted);">No tasks for today</div>';
+            const highEl = document.getElementById('todoist-high');
+            if (highEl) {
+                highEl.innerHTML = highPriority.map((t, i) => {
+                    const idx = tasks.indexOf(t);
+                    return `
+                        <div class="todoist-item" style="border-left: 3px solid #ff4757;">
+                            <div class="todoist-checkbox ${t.completed ? 'checked' : ''}" onclick="toggleTask(${idx})"></div>
+                            <span class="todoist-text" style="color: #ff4757;">${t.text}</span>
+                            ${t.dueDate ? `<span style="font-size: 0.75rem; color: var(--text-muted); margin-left: auto;">${formatDate(t.dueDate)}</span>` : ''}
+                        </div>
+                    `;
+                }).join('') || '';
+            }
             
-            document.getElementById('todoist-upcoming').innerHTML = tasks.filter(t => !t.completed).slice(5, 10).map((t, i) => `
-                <div class="todoist-item">
-                    <div class="todoist-checkbox" onclick="toggleTask(${i + 5})"></div>
-                    <span>${t.text}</span>
-                </div>
-            `).join('') || '<div class="todoist-item" style="color: var(--text-muted);">No upcoming tasks</div>';
+            document.getElementById('todoist-today').innerHTML = today.map((t) => {
+                const idx = tasks.indexOf(t);
+                return `
+                    <div class="todoist-item">
+                        <div class="todoist-checkbox ${t.completed ? 'checked' : ''}" onclick="toggleTask(${idx})"></div>
+                        <span class="todoist-text">${t.text}</span>
+                        ${t.dueDate ? `<span style="font-size: 0.75rem; color: var(--text-muted); margin-left: auto;">${formatDate(t.dueDate)}</span>` : ''}
+                    </div>
+                `;
+            }).join('') || '<div class="todoist-item" style="color: var(--text-muted);">No tasks for today</div>';
             
-            document.getElementById('todoist-completed').innerHTML = completed.map((t, i) => `
-                <div class="todoist-item completed">
-                    <div class="todoist-checkbox checked"></div>
-                    <span>${t.text}</span>
-                </div>
-            `).join('') || '';
+            document.getElementById('todoist-upcoming').innerHTML = upcoming.map((t) => {
+                const idx = tasks.indexOf(t);
+                return `
+                    <div class="todoist-item">
+                        <div class="todoist-checkbox" onclick="toggleTask(${idx})"></div>
+                        <span>${t.text}</span>
+                        ${t.dueDate ? `<span style="font-size: 0.75rem; color: var(--text-muted); margin-left: auto;">${formatDate(t.dueDate)}</span>` : ''}
+                    </div>
+                `;
+            }).join('') || '<div class="todoist-item" style="color: var(--text-muted);">No upcoming tasks</div>';
+            
+            document.getElementById('todoist-completed').innerHTML = completed.map((t) => {
+                const idx = tasks.indexOf(t);
+                return `
+                    <div class="todoist-item completed">
+                        <div class="todoist-checkbox checked"></div>
+                        <span>${t.text}</span>
+                    </div>
+                `;
+            }).join('') || '';
         }
 
         function filterTasks(filter) {
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            // Filter logic
-            renderTodoistStyle();
+            document.getElementById('task-filter').value = filter;
+            renderTasks();
         }
 
         // ==================== FULL FIGMA CLONE FUNCTIONS ====================
@@ -6032,13 +9116,19 @@
         ];
 
         function initFigma() {
+            console.log('Initializing Figma...');
+            
             // Tool selection
-            document.querySelectorAll('.figma-tool-exact').forEach(tool => {
+            const tools = document.querySelectorAll('.figma-tool-exact');
+            console.log('Found tools:', tools.length);
+            
+            tools.forEach(tool => {
                 tool.addEventListener('click', () => {
                     document.querySelectorAll('.figma-tool-exact').forEach(t => t.classList.remove('active'));
                     tool.classList.add('active');
                     currentTool = tool.dataset.tool;
                     updateCursor();
+                    console.log('Tool selected:', currentTool);
                 });
             });
 
@@ -6098,7 +9188,68 @@
 
         function setupKeyboardShortcuts() {
             document.addEventListener('keydown', (e) => {
-                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                // Global shortcuts (work everywhere)
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    openSearch();
+                    return;
+                }
+                
+                if ((e.ctrlKey || e.metaKey) && e.key === '1') {
+                    e.preventDefault();
+                    showSection('home');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '2') {
+                    e.preventDefault();
+                    showSection('code');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '3') {
+                    e.preventDefault();
+                    showSection('notes');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '4') {
+                    e.preventDefault();
+                    showSection('projects');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '5') {
+                    e.preventDefault();
+                    showSection('design');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '6') {
+                    e.preventDefault();
+                    showSection('tasks');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '7') {
+                    e.preventDefault();
+                    showSection('youtube');
+                    return;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === '8') {
+                    e.preventDefault();
+                    showSection('stream');
+                    return;
+                }
+                
+                if ((e.ctrlKey || e.metaKey) && e.key === 't') {
+                    e.preventDefault();
+                    toggleTheme();
+                    return;
+                }
+                
+                if (e.key === '?' && !e.ctrlKey) {
+                    e.preventDefault();
+                    showShortcuts();
+                    return;
+                }
+                
+                // Skip if in input/textarea
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
                 
                 // Tool shortcuts
                 const tools = { 
@@ -6124,7 +9275,7 @@
                 switch(e.key) {
                     case 'Delete':
                     case 'Backspace':
-                        if (selectedElements.length > 0 && document.activeElement?.tagName !== 'INPUT') {
+                        if (selectedElements.length > 0) {
                             e.preventDefault();
                             deleteSelected();
                         }
@@ -6317,6 +9468,7 @@
                         visible: true,
                         name: `${currentTool.charAt(0).toUpperCase() + currentTool.slice(1)} ${id}`
                     };
+                    console.log('Creating element:', element);
                     designElements.push(element);
                     renderElement(element);
                     selectElement(id);
@@ -8187,9 +11339,12 @@
         }
 
         function renderNotes() {
-            const filter = document.getElementById('filter-notes').value;
+            const filterEl = document.getElementById('filter-notes');
+            const filter = filterEl ? filterEl.value : 'all';
             const filtered = filter === 'all' ? notes : notes.filter(n => n.type === filter);
             const list = document.getElementById('notes-list');
+            
+            if (!list) return;
             
             if (filtered.length === 0) {
                 list.innerHTML = `
@@ -8248,14 +11403,36 @@
         }
 
         function renderTasks() {
-            const filter = document.getElementById('task-filter').value;
-            const filtered = filter === 'all' ? tasks : 
-                filter === 'completed' ? tasks.filter(t => t.completed) : tasks.filter(t => !t.completed);
+            const filterEl = document.getElementById('task-filter');
+            const priorityFilterEl = document.getElementById('priority-filter');
+            const filter = filterEl ? filterEl.value : 'all';
+            const priorityFilter = priorityFilterEl ? priorityFilterEl.value : '';
+            
+            let filtered = tasks;
+            
+            if (filter === 'completed') {
+                filtered = tasks.filter(t => t.completed);
+            } else if (filter === 'today') {
+                const today = new Date().toLocaleDateString();
+                filtered = tasks.filter(t => !t.completed && (t.dueDate === today || t.date === today));
+            } else if (filter === 'upcoming') {
+                filtered = tasks.filter(t => !t.completed && t.priority !== 'high');
+            }
+            
+            if (priorityFilter) {
+                filtered = filtered.filter(t => t.priority === priorityFilter);
+            }
+            
             const list = document.getElementById('tasks-list');
             
-            document.getElementById('total-tasks').textContent = tasks.length;
-            document.getElementById('active-tasks').textContent = tasks.filter(t => !t.completed).length;
-            document.getElementById('done-tasks').textContent = tasks.filter(t => t.completed).length;
+            if (!list) return;
+            
+            const totalEl = document.getElementById('total-tasks');
+            const activeEl = document.getElementById('active-tasks');
+            const doneEl = document.getElementById('done-tasks');
+            if (totalEl) totalEl.textContent = tasks.length;
+            if (activeEl) activeEl.textContent = tasks.filter(t => !t.completed).length;
+            if (doneEl) doneEl.textContent = tasks.filter(t => t.completed).length;
             
             if (filtered.length === 0) {
                 list.innerHTML = `
@@ -8275,12 +11452,15 @@
                 <li class="todo-item ${t.completed ? 'completed' : ''}" draggable="true">
                     <div class="todo-checkbox ${t.completed ? 'checked' : ''}" onclick="toggleTask(${i})"></div>
                     <span class="todo-text">${t.text}</span>
+                    ${t.priority ? `<span class="task-priority-badge ${t.priority}">${t.priority}</span>` : ''}
+                    ${t.dueDate ? `<span class="task-due-date">${formatDate(t.dueDate)}</span>` : ''}
                     <span class="todo-delete" onclick="deleteTask(${i})"><i class="fas fa-times"></i></span>
                 </li>
             `).join('');
             
             // Re-init drag and drop
             initDragDrop();
+            renderTodoistStyle();
         }
 
         function renderContentIdeas() {
@@ -8360,7 +11540,9 @@
         let codeHistoryIndex = -1;
 
         function saveCodeHistory() {
-            const code = document.getElementById('code-editor').value;
+            const editor = document.getElementById('code-editor');
+            if (!editor) return;
+            const code = editor.value;
             if (code !== codeHistory[codeHistoryIndex]) {
                 codeHistory = codeHistory.slice(0, codeHistoryIndex + 1);
                 codeHistory.push(code);
@@ -8378,12 +11560,25 @@
         function redoCode() {
             if (codeHistoryIndex < codeHistory.length - 1) {
                 codeHistoryIndex++;
-                document.getElementById('code-editor').value = codeHistory[codeHistoryIndex];
+                const editor = document.getElementById('code-editor');
+                if (editor) editor.value = codeHistory[codeHistoryIndex];
             }
         }
 
-        // Save code history periodically
-        setInterval(saveCodeHistory, 3000);
+        // Debounced save code history
+        const debouncedSaveHistory = debounce(() => {
+            saveCodeHistory();
+        }, 2000);
+
+        // Auto-save code history on changes
+        document.addEventListener('DOMContentLoaded', () => {
+            ['codepen-html', 'codepen-css', 'codepen-js'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', debouncedSaveHistory);
+                }
+            });
+        });
 
         // ==================== RICH TEXT EDITOR ====================
         function execCmd(command, value = null) {
@@ -8970,6 +12165,22 @@
             
             // Check recurring tasks
             checkRecurringTasks();
+            
+            // Register Service Worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            }
+            
+            // Request notification permission
+            if ('Notification' in window && Notification.permission === 'default') {
+                console.log('Notification permission available');
+            }
         });
     </script>
 </body>

@@ -1,0 +1,21 @@
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local data (optional - uncomment if you don't want to sync localStorage)
+# localStorage backup files
+*.localbackup
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/

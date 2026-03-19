@@ -1,16 +1,52 @@
 {
-  "name": "DevToolkit",
+  "name": "DevToolkit - Digital Workspace",
   "short_name": "DevToolkit",
-  "description": "Your all-in-one digital workspace with AI assistance",
-  "start_url": "/",
+  "description": "Your all-in-one digital workspace with AI assistance. Code, Notes, Projects, Tasks, Design, YouTube, Streaming tools.",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#00f5d4",
+  "orientation": "any",
+  "scope": "./",
+  "categories": ["productivity", "utilities", "developer"],
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='64' fill='%230a0a0f'/><text x='50%25' y='50%25' font-size='280' text-anchor='middle' dy='.35em' fill='%2300f5d4'>🛠️</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='24' fill='%230a0a0f'/><text x='50%25' y='50%25' font-size='100' text-anchor='middle' dy='.35em' fill='%2300f5d4'>🛠️</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Code Editor",
+      "short_name": "Code",
+      "description": "Open the code editor",
+      "url": "./index.html#code",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect width='96' height='96' rx='12' fill='%230a0a0f'/><text x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='%2300f5d4'>💻</text></svg>", "sizes": "96x96" }]
+    },
+    {
+      "name": "Tasks",
+      "short_name": "Tasks",
+      "description": "View your tasks",
+      "url": "./index.html#tasks",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect width='96' height='96' rx='12' fill='%230a0a0f'/><text x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='%2300f5d4'>✅</text></svg>", "sizes": "96x96" }]
+    },
+    {
+      "name": "AI Assistant",
+      "short_name": "AI",
+      "description": "Chat with AI",
+      "url": "./index.html#home",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect width='96' height='96' rx='12' fill='%230a0a0f'/><text x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='%2300f5d4'>🤖</text></svg>", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
 }
