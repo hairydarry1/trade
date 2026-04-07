@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sweep-signals
+    env: node
+    buildCommand: npm install && cd Desktop/pairs && npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
+      - key: DERIV_DEMO_APP_ID
+        value: "16929"
+      - key: ACTIVE_ACCOUNT
+        value: "demo"
