@@ -1,7 +1,8 @@
 {
   "$schema": "https://railway.app/railway.json",
   "build": {
-    "builder": "NIXPACKS_NODEJS"
+    "builder": "NIXPACKS_NODEJS",
+    "nodeVersion": "18"
   },
   "deploy": {
     "numRetries": 10,

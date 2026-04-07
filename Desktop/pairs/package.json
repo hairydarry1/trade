@@ -1,0 +1,21 @@
+{
+  "name": "sweep-signals",
+  "version": "1.0.0",
+  "description": "Trading signal system with ICT methodology",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "cd backend && node --watch src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^8.3.2",
+    "pino": "^10.3.1",
+    "sql.js": "^1.11.0",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
