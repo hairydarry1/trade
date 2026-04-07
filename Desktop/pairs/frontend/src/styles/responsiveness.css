@@ -1,0 +1,95 @@
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--amber);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--amber);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px;
+}
+
+.loading-text {
+  font-size: 12px;
+  color: var(--muted2);
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column !important;
+  }
+  
+  .chart-area {
+    width: 100% !important;
+    min-height: 300px !important;
+  }
+  
+  .sidebar {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+  
+  .topbar {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+  
+  .tf-tabs {
+    order: 3;
+    width: 100%;
+    justify-content: center !important;
+  }
+  
+  .logo {
+    font-size: 14px !important;
+  }
+  
+  .signal-detail {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+  
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    min-height: 250px !important;
+  }
+  
+  .chart-canvas {
+    height: 200px !important;
+  }
+  
+  .stat-box {
+    padding: 8px !important;
+  }
+  
+  .stat-value {
+    font-size: 16px !important;
+  }
+}
