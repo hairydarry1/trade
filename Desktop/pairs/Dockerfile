@@ -1,18 +1,16 @@
-FROM node:20-alpine
+FROM node:18-alpine
 
 WORKDIR /app
-
-RUN apk add --no-cache tzdata
 
 ENV NODE_ENV=production \
     TZ=UTC \
     PORT=8000
 
-COPY backend/package*.json ./
-RUN npm ci --only=production
+COPY Desktop/pairs/backend/package*.json ./Desktop/pairs/backend/
+RUN cd Desktop/pairs/backend && npm ci --only=production
 
-COPY backend/src ./src
+COPY Desktop/pairs/backend/src ./Desktop/pairs/backend/src
 
 EXPOSE 8000
 
-CMD ["node", "src/server.js"]
+CMD ["node", "Desktop/pairs/backend/src/server.js"]
